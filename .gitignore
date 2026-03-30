@@ -1,0 +1,92 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset archives and extracted data
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+caltech101_data/
+caltech-101.zip
+caltech-101/
+data/
+datasets/
+
+# Model artifacts
+checkpoints/
+final_models/
+models/
+*.h5
+*.keras
+*.ckpt
+*.pt
+*.pth
+*.pb
+*.tflite
+*.onnx
+
+# Exclude all model weights in adversarial_bank and attack_models (recursively)
+Model Training/adversarial_bank/**/*.h5
+Model Training/adversarial_bank/**/*.ckpt
+Model Training/adversarial_bank/**/*.pt
+Model Training/adversarial_bank/**/*.pth
+Model Training/adversarial_bank/**/*.pb
+Model Training/adversarial_bank/**/*.tflite
+Model Training/adversarial_bank/**/*.onnx
+Model Training/attack_models/**/*.h5
+Model Training/attack_models/**/*.ckpt
+Model Training/attack_models/**/*.pt
+Model Training/attack_models/**/*.pth
+Model Training/attack_models/**/*.pb
+Model Training/attack_models/**/*.tflite
+Model Training/attack_models/**/*.onnx
+
+# Numpy and caches
+*.npy
+*.npz
+.cache/
+
+# Logs and outputs
+logs/
+*.log
+training_curves.png
+individual_training_curves.png
+model_comparison.png
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Testing / tools
+.pytest_cache/
+.mypy_cache/
+
+# Misc
+*.pyc
+# Model weights and large files
+*.h5
+*.ckpt
+*.pt
+*.onnx
+*.tflite
+*.pb
+Model Training/adversarial_bank/
+Model Training/attack_models/
+Model Training/checkpoints/
+Model Training/final_models/

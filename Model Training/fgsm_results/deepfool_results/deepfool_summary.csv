@@ -1,0 +1,4 @@
+Model,Tested Samples,Fooled Samples,Fooling Rate (%),Avg L2 Distance,Median L2 Distance,Avg Iterations
+VGG19,813,813,100.0,1.0412,0.992,3.54
+ResNet50,824,824,100.0,0.6915,0.6242,4.75
+DenseNet121,833,833,100.0,0.3486,0.3109,5.3

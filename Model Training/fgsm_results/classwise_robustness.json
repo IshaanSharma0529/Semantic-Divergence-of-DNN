@@ -1,0 +1,6523 @@
+{
+  "experiment": "Class-Wise Adversarial Robustness",
+  "dataset": "Caltech-101",
+  "num_classes": 101,
+  "class_names": [
+    "Faces",
+    "Faces_easy",
+    "Leopards",
+    "Motorbikes",
+    "accordion",
+    "airplanes",
+    "anchor",
+    "ant",
+    "barrel",
+    "bass",
+    "beaver",
+    "binocular",
+    "bonsai",
+    "brain",
+    "brontosaurus",
+    "buddha",
+    "butterfly",
+    "camera",
+    "cannon",
+    "car_side",
+    "ceiling_fan",
+    "cellphone",
+    "chair",
+    "chandelier",
+    "cougar_body",
+    "cougar_face",
+    "crab",
+    "crayfish",
+    "crocodile",
+    "crocodile_head",
+    "cup",
+    "dalmatian",
+    "dollar_bill",
+    "dolphin",
+    "dragonfly",
+    "electric_guitar",
+    "elephant",
+    "emu",
+    "euphonium",
+    "ewer",
+    "ferry",
+    "flamingo",
+    "flamingo_head",
+    "garfield",
+    "gerenuk",
+    "gramophone",
+    "grand_piano",
+    "hawksbill",
+    "headphone",
+    "hedgehog",
+    "helicopter",
+    "ibis",
+    "inline_skate",
+    "joshua_tree",
+    "kangaroo",
+    "ketch",
+    "lamp",
+    "laptop",
+    "llama",
+    "lobster",
+    "lotus",
+    "mandolin",
+    "mayfly",
+    "menorah",
+    "metronome",
+    "minaret",
+    "nautilus",
+    "octopus",
+    "okapi",
+    "pagoda",
+    "panda",
+    "pigeon",
+    "pizza",
+    "platypus",
+    "pyramid",
+    "revolver",
+    "rhino",
+    "rooster",
+    "saxophone",
+    "schooner",
+    "scissors",
+    "scorpion",
+    "sea_horse",
+    "snoopy",
+    "soccer_ball",
+    "stapler",
+    "starfish",
+    "stegosaurus",
+    "stop_sign",
+    "strawberry",
+    "sunflower",
+    "tick",
+    "trilobite",
+    "umbrella",
+    "watch",
+    "water_lilly",
+    "wheelchair",
+    "wild_cat",
+    "windsor_chair",
+    "wrench",
+    "yin_yang"
+  ],
+  "epsilons": [
+    0.005,
+    0.01,
+    0.02,
+    0.04
+  ],
+  "attack_type": "FGSM",
+  "attack_norm": "L-infinity",
+  "models": {
+    "VGG19": {
+      "clean_accuracy": {
+        "Faces": 0.96875,
+        "Faces_easy": 0.955556,
+        "Leopards": 1.0,
+        "Motorbikes": 1.0,
+        "accordion": 1.0,
+        "airplanes": 1.0,
+        "anchor": 0.888889,
+        "ant": 0.625,
+        "barrel": 0.857143,
+        "bass": 1.0,
+        "beaver": 0.857143,
+        "binocular": 1.0,
+        "bonsai": 1.0,
+        "brain": 1.0,
+        "brontosaurus": 0.5,
+        "buddha": 1.0,
+        "butterfly": 1.0,
+        "camera": 0.833333,
+        "cannon": 0.8,
+        "car_side": 1.0,
+        "ceiling_fan": 1.0,
+        "cellphone": 1.0,
+        "chair": 1.0,
+        "chandelier": 1.0,
+        "cougar_body": 0.666667,
+        "cougar_face": 1.0,
+        "crab": 0.4,
+        "crayfish": 0.923077,
+        "crocodile": 0.666667,
+        "crocodile_head": 0.75,
+        "cup": 1.0,
+        "dalmatian": 1.0,
+        "dollar_bill": 1.0,
+        "dolphin": 0.909091,
+        "dragonfly": 0.777778,
+        "electric_guitar": 0.571429,
+        "elephant": 0.8,
+        "emu": 1.0,
+        "euphonium": 1.0,
+        "ewer": 1.0,
+        "ferry": 1.0,
+        "flamingo": 1.0,
+        "flamingo_head": 1.0,
+        "garfield": 1.0,
+        "gerenuk": 0.75,
+        "gramophone": 0.75,
+        "grand_piano": 0.9375,
+        "hawksbill": 1.0,
+        "headphone": 1.0,
+        "hedgehog": 1.0,
+        "helicopter": 1.0,
+        "ibis": 0.875,
+        "inline_skate": 1.0,
+        "joshua_tree": 0.857143,
+        "kangaroo": 1.0,
+        "ketch": 0.857143,
+        "lamp": 0.714286,
+        "laptop": 1.0,
+        "llama": 0.833333,
+        "lobster": 0.333333,
+        "lotus": 0.7,
+        "mandolin": 1.0,
+        "mayfly": 1.0,
+        "menorah": 1.0,
+        "metronome": 1.0,
+        "minaret": 1.0,
+        "nautilus": 1.0,
+        "octopus": 0.5,
+        "okapi": 1.0,
+        "pagoda": 1.0,
+        "panda": 1.0,
+        "pigeon": 1.0,
+        "pizza": 1.0,
+        "platypus": 0.5,
+        "pyramid": 1.0,
+        "revolver": 1.0,
+        "rhino": 1.0,
+        "rooster": 1.0,
+        "saxophone": 1.0,
+        "schooner": 0.8,
+        "scissors": 1.0,
+        "scorpion": 0.923077,
+        "sea_horse": 0.8,
+        "snoopy": 1.0,
+        "soccer_ball": 1.0,
+        "stapler": 0.857143,
+        "starfish": 1.0,
+        "stegosaurus": 0.8,
+        "stop_sign": 1.0,
+        "strawberry": 1.0,
+        "sunflower": 1.0,
+        "tick": 1.0,
+        "trilobite": 1.0,
+        "umbrella": 1.0,
+        "watch": 0.928571,
+        "water_lilly": 1.0,
+        "wheelchair": 1.0,
+        "wild_cat": 0.8,
+        "windsor_chair": 0.857143,
+        "wrench": 1.0,
+        "yin_yang": 1.0
+      },
+      "adversarial": {
+        "0.005": {
+          "Faces": {
+            "robust_accuracy": 0.875,
+            "robustness_drop": 0.09375,
+            "collapse_rate": 0.125
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.911111,
+            "robustness_drop": 0.044444,
+            "collapse_rate": 0.088889
+          },
+          "Leopards": {
+            "robust_accuracy": 0.761905,
+            "robustness_drop": 0.238095,
+            "collapse_rate": 0.238095
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.906667,
+            "robustness_drop": 0.093333,
+            "collapse_rate": 0.093333
+          },
+          "accordion": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "airplanes": {
+            "robust_accuracy": 0.863636,
+            "robustness_drop": 0.136364,
+            "collapse_rate": 0.136364
+          },
+          "anchor": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.888889
+          },
+          "ant": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.75
+          },
+          "barrel": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "binocular": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "bonsai": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "brain": {
+            "robust_accuracy": 0.8,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.2
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.555556,
+            "robustness_drop": 0.444444,
+            "collapse_rate": 0.444444
+          },
+          "butterfly": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "camera": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.333333
+          },
+          "cannon": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.4
+          },
+          "car_side": {
+            "robust_accuracy": 0.9,
+            "robustness_drop": 0.1,
+            "collapse_rate": 0.1
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "chair": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "chandelier": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.666667
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.8,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.2
+          },
+          "crab": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.8
+          },
+          "crayfish": {
+            "robust_accuracy": 0.153846,
+            "robustness_drop": 0.769231,
+            "collapse_rate": 0.846154
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.75
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "dolphin": {
+            "robust_accuracy": 0.272727,
+            "robustness_drop": 0.636364,
+            "collapse_rate": 0.727273
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.555556
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.857143
+          },
+          "elephant": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.6
+          },
+          "emu": {
+            "robust_accuracy": 0.571429,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.428571
+          },
+          "euphonium": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "ewer": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "ferry": {
+            "robust_accuracy": 0.555556,
+            "robustness_drop": 0.444444,
+            "collapse_rate": 0.444444
+          },
+          "flamingo": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "garfield": {
+            "robust_accuracy": 0.888889,
+            "robustness_drop": 0.111111,
+            "collapse_rate": 0.111111
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.75
+          },
+          "gramophone": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.75
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.4375,
+            "collapse_rate": 0.5
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "headphone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "helicopter": {
+            "robust_accuracy": 0.5625,
+            "robustness_drop": 0.4375,
+            "collapse_rate": 0.4375
+          },
+          "ibis": {
+            "robust_accuracy": 0.125,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.875
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.571429,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.428571
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ketch": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.571429
+          },
+          "lamp": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.571429
+          },
+          "laptop": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "llama": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.5
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.7
+          },
+          "mandolin": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "mayfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "menorah": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "metronome": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "minaret": {
+            "robust_accuracy": 0.875,
+            "robustness_drop": 0.125,
+            "collapse_rate": 0.125
+          },
+          "nautilus": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "octopus": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.75
+          },
+          "okapi": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "pagoda": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "panda": {
+            "robust_accuracy": 0.833333,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.166667
+          },
+          "pigeon": {
+            "robust_accuracy": 0.8,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.2
+          },
+          "pizza": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "revolver": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "rhino": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "rooster": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "saxophone": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "schooner": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.8
+          },
+          "scissors": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "scorpion": {
+            "robust_accuracy": 0.307692,
+            "robustness_drop": 0.615385,
+            "collapse_rate": 0.692308
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.8
+          },
+          "snoopy": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.375
+          },
+          "stapler": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "starfish": {
+            "robust_accuracy": 0.555556,
+            "robustness_drop": 0.444444,
+            "collapse_rate": 0.444444
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.6
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "sunflower": {
+            "robust_accuracy": 0.833333,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.166667
+          },
+          "tick": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "trilobite": {
+            "robust_accuracy": 0.818182,
+            "robustness_drop": 0.181818,
+            "collapse_rate": 0.181818
+          },
+          "umbrella": {
+            "robust_accuracy": 0.714286,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.285714
+          },
+          "watch": {
+            "robust_accuracy": 0.642857,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.357143
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.8
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.857143,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.142857
+          },
+          "wrench": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          }
+        },
+        "0.01": {
+          "Faces": {
+            "robust_accuracy": 0.71875,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.28125
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.377778,
+            "robustness_drop": 0.577778,
+            "collapse_rate": 0.622222
+          },
+          "Leopards": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.68,
+            "robustness_drop": 0.32,
+            "collapse_rate": 0.32
+          },
+          "accordion": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "airplanes": {
+            "robust_accuracy": 0.530303,
+            "robustness_drop": 0.469697,
+            "collapse_rate": 0.469697
+          },
+          "anchor": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.888889
+          },
+          "ant": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.75
+          },
+          "barrel": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "binocular": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "bonsai": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "brain": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "butterfly": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "camera": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.333333
+          },
+          "cannon": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.6
+          },
+          "car_side": {
+            "robust_accuracy": 0.7,
+            "robustness_drop": 0.3,
+            "collapse_rate": 0.3
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "chair": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "chandelier": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.666667
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "crab": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.8
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.923077,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.75
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dolphin": {
+            "robust_accuracy": 0.272727,
+            "robustness_drop": 0.636364,
+            "collapse_rate": 0.727273
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.444444,
+            "collapse_rate": 0.666667
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.6
+          },
+          "emu": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "euphonium": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "ewer": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ferry": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "flamingo": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "garfield": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.4375,
+            "collapse_rate": 0.5
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "headphone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "helicopter": {
+            "robust_accuracy": 0.3125,
+            "robustness_drop": 0.6875,
+            "collapse_rate": 0.6875
+          },
+          "ibis": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.875,
+            "collapse_rate": 1.0
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.714286
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ketch": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.714286
+          },
+          "lamp": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.857143
+          },
+          "laptop": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "llama": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.833333
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.8
+          },
+          "mandolin": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "mayfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "menorah": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.375
+          },
+          "nautilus": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "octopus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "okapi": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "pagoda": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "panda": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "pigeon": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "pizza": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "revolver": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "rhino": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "rooster": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "saxophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "schooner": {
+            "robust_accuracy": 0.1,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.9
+          },
+          "scissors": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "scorpion": {
+            "robust_accuracy": 0.153846,
+            "robustness_drop": 0.769231,
+            "collapse_rate": 0.846154
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "snoopy": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.375
+          },
+          "stapler": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "starfish": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "tick": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "trilobite": {
+            "robust_accuracy": 0.454545,
+            "robustness_drop": 0.545455,
+            "collapse_rate": 0.545455
+          },
+          "umbrella": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "watch": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.5
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.857143,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.142857
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          }
+        },
+        "0.02": {
+          "Faces": {
+            "robust_accuracy": 0.4375,
+            "robustness_drop": 0.53125,
+            "collapse_rate": 0.5625
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.066667,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.933333
+          },
+          "Leopards": {
+            "robust_accuracy": 0.190476,
+            "robustness_drop": 0.809524,
+            "collapse_rate": 0.809524
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.306667,
+            "robustness_drop": 0.693333,
+            "collapse_rate": 0.693333
+          },
+          "accordion": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "airplanes": {
+            "robust_accuracy": 0.287879,
+            "robustness_drop": 0.712121,
+            "collapse_rate": 0.712121
+          },
+          "anchor": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.888889
+          },
+          "ant": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.75
+          },
+          "barrel": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 1.0
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 1.0
+          },
+          "binocular": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "bonsai": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "brain": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "butterfly": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "camera": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.5
+          },
+          "cannon": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.6
+          },
+          "car_side": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "chair": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "chandelier": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.666667
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "crab": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.8
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.923077,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.75
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dolphin": {
+            "robust_accuracy": 0.181818,
+            "robustness_drop": 0.727273,
+            "collapse_rate": 0.818182
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.777778
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.6
+          },
+          "emu": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "euphonium": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ewer": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ferry": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "flamingo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "garfield": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.375,
+            "robustness_drop": 0.5625,
+            "collapse_rate": 0.625
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "headphone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "helicopter": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "ibis": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.875,
+            "collapse_rate": 1.0
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ketch": {
+            "robust_accuracy": 0.214286,
+            "robustness_drop": 0.642857,
+            "collapse_rate": 0.785714
+          },
+          "lamp": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 1.0
+          },
+          "laptop": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "llama": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.833333
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.8
+          },
+          "mandolin": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "mayfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "menorah": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "nautilus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "octopus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "okapi": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "pagoda": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "panda": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "pigeon": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "pizza": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "revolver": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "rhino": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "rooster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "saxophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "schooner": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "scissors": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "scorpion": {
+            "robust_accuracy": 0.153846,
+            "robustness_drop": 0.769231,
+            "collapse_rate": 0.846154
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "snoopy": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.375
+          },
+          "stapler": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 1.0
+          },
+          "starfish": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.416667,
+            "robustness_drop": 0.583333,
+            "collapse_rate": 0.583333
+          },
+          "tick": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "trilobite": {
+            "robust_accuracy": 0.272727,
+            "robustness_drop": 0.727273,
+            "collapse_rate": 0.727273
+          },
+          "umbrella": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "watch": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.642857,
+            "collapse_rate": 0.714286
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.571429,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.428571
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          }
+        },
+        "0.04": {
+          "Faces": {
+            "robust_accuracy": 0.3125,
+            "robustness_drop": 0.65625,
+            "collapse_rate": 0.6875
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.177778,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.822222
+          },
+          "Leopards": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.226667,
+            "robustness_drop": 0.773333,
+            "collapse_rate": 0.773333
+          },
+          "accordion": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "airplanes": {
+            "robust_accuracy": 0.151515,
+            "robustness_drop": 0.848485,
+            "collapse_rate": 0.848485
+          },
+          "anchor": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.888889
+          },
+          "ant": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.75
+          },
+          "barrel": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "binocular": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "bonsai": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "brain": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "butterfly": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "camera": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.5
+          },
+          "cannon": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.6
+          },
+          "car_side": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "chair": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "chandelier": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.666667
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "crab": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.8
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.923077,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.75
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dolphin": {
+            "robust_accuracy": 0.090909,
+            "robustness_drop": 0.818182,
+            "collapse_rate": 0.909091
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.777778
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.6
+          },
+          "emu": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "euphonium": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ewer": {
+            "robust_accuracy": 0.416667,
+            "robustness_drop": 0.583333,
+            "collapse_rate": 0.583333
+          },
+          "ferry": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "flamingo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "garfield": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.6875,
+            "collapse_rate": 0.75
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "headphone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "helicopter": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "ibis": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.875,
+            "collapse_rate": 1.0
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 1.0
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ketch": {
+            "robust_accuracy": 0.214286,
+            "robustness_drop": 0.642857,
+            "collapse_rate": 0.785714
+          },
+          "lamp": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.857143
+          },
+          "laptop": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "llama": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.833333
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.8
+          },
+          "mandolin": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "mayfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "menorah": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "nautilus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "octopus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "okapi": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "pagoda": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "panda": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "pigeon": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pizza": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "revolver": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "rhino": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "rooster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "saxophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "schooner": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "scissors": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "scorpion": {
+            "robust_accuracy": 0.153846,
+            "robustness_drop": 0.769231,
+            "collapse_rate": 0.846154
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "snoopy": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.375
+          },
+          "stapler": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 1.0
+          },
+          "starfish": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.416667,
+            "robustness_drop": 0.583333,
+            "collapse_rate": 0.583333
+          },
+          "tick": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "trilobite": {
+            "robust_accuracy": 0.181818,
+            "robustness_drop": 0.818182,
+            "collapse_rate": 0.818182
+          },
+          "umbrella": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "watch": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.785714,
+            "collapse_rate": 0.857143
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.571429,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.428571
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          }
+        }
+      }
+    },
+    "ResNet50": {
+      "clean_accuracy": {
+        "Faces": 0.9375,
+        "Faces_easy": 0.955556,
+        "Leopards": 1.0,
+        "Motorbikes": 1.0,
+        "accordion": 1.0,
+        "airplanes": 1.0,
+        "anchor": 1.0,
+        "ant": 0.75,
+        "barrel": 1.0,
+        "bass": 0.666667,
+        "beaver": 0.857143,
+        "binocular": 1.0,
+        "bonsai": 1.0,
+        "brain": 1.0,
+        "brontosaurus": 1.0,
+        "buddha": 1.0,
+        "butterfly": 1.0,
+        "camera": 1.0,
+        "cannon": 0.8,
+        "car_side": 1.0,
+        "ceiling_fan": 1.0,
+        "cellphone": 1.0,
+        "chair": 1.0,
+        "chandelier": 1.0,
+        "cougar_body": 0.666667,
+        "cougar_face": 1.0,
+        "crab": 0.4,
+        "crayfish": 0.923077,
+        "crocodile": 0.833333,
+        "crocodile_head": 1.0,
+        "cup": 0.833333,
+        "dalmatian": 1.0,
+        "dollar_bill": 1.0,
+        "dolphin": 0.909091,
+        "dragonfly": 1.0,
+        "electric_guitar": 0.428571,
+        "elephant": 1.0,
+        "emu": 1.0,
+        "euphonium": 1.0,
+        "ewer": 1.0,
+        "ferry": 1.0,
+        "flamingo": 1.0,
+        "flamingo_head": 1.0,
+        "garfield": 1.0,
+        "gerenuk": 0.75,
+        "gramophone": 1.0,
+        "grand_piano": 1.0,
+        "hawksbill": 1.0,
+        "headphone": 1.0,
+        "hedgehog": 1.0,
+        "helicopter": 1.0,
+        "ibis": 0.875,
+        "inline_skate": 1.0,
+        "joshua_tree": 0.714286,
+        "kangaroo": 1.0,
+        "ketch": 0.857143,
+        "lamp": 0.714286,
+        "laptop": 1.0,
+        "llama": 1.0,
+        "lobster": 0.666667,
+        "lotus": 0.7,
+        "mandolin": 1.0,
+        "mayfly": 1.0,
+        "menorah": 1.0,
+        "metronome": 1.0,
+        "minaret": 1.0,
+        "nautilus": 1.0,
+        "octopus": 0.5,
+        "okapi": 1.0,
+        "pagoda": 1.0,
+        "panda": 1.0,
+        "pigeon": 1.0,
+        "pizza": 0.857143,
+        "platypus": 0.5,
+        "pyramid": 1.0,
+        "revolver": 1.0,
+        "rhino": 1.0,
+        "rooster": 1.0,
+        "saxophone": 1.0,
+        "schooner": 0.7,
+        "scissors": 1.0,
+        "scorpion": 1.0,
+        "sea_horse": 1.0,
+        "snoopy": 1.0,
+        "soccer_ball": 0.875,
+        "stapler": 1.0,
+        "starfish": 1.0,
+        "stegosaurus": 0.8,
+        "stop_sign": 1.0,
+        "strawberry": 1.0,
+        "sunflower": 1.0,
+        "tick": 1.0,
+        "trilobite": 1.0,
+        "umbrella": 1.0,
+        "watch": 0.928571,
+        "water_lilly": 1.0,
+        "wheelchair": 1.0,
+        "wild_cat": 1.0,
+        "windsor_chair": 1.0,
+        "wrench": 1.0,
+        "yin_yang": 1.0
+      },
+      "adversarial": {
+        "0.005": {
+          "Faces": {
+            "robust_accuracy": 0.84375,
+            "robustness_drop": 0.09375,
+            "collapse_rate": 0.15625
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.933333,
+            "robustness_drop": 0.022222,
+            "collapse_rate": 0.066667
+          },
+          "Leopards": {
+            "robust_accuracy": 0.809524,
+            "robustness_drop": 0.190476,
+            "collapse_rate": 0.190476
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.866667,
+            "robustness_drop": 0.133333,
+            "collapse_rate": 0.133333
+          },
+          "accordion": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "airplanes": {
+            "robust_accuracy": 0.636364,
+            "robustness_drop": 0.363636,
+            "collapse_rate": 0.363636
+          },
+          "anchor": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "ant": {
+            "robust_accuracy": 0.125,
+            "robustness_drop": 0.625,
+            "collapse_rate": 0.875
+          },
+          "barrel": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.571429
+          },
+          "binocular": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "bonsai": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "brain": {
+            "robust_accuracy": 0.7,
+            "robustness_drop": 0.3,
+            "collapse_rate": 0.3
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.777778,
+            "robustness_drop": 0.222222,
+            "collapse_rate": 0.222222
+          },
+          "butterfly": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "camera": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "cannon": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.4
+          },
+          "car_side": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "chair": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "chandelier": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.666667
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.8,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.2
+          },
+          "crab": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.8
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.923077,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "dolphin": {
+            "robust_accuracy": 0.454545,
+            "robustness_drop": 0.454545,
+            "collapse_rate": 0.545455
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.555556,
+            "robustness_drop": 0.444444,
+            "collapse_rate": 0.444444
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "emu": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "euphonium": {
+            "robust_accuracy": 0.833333,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.166667
+          },
+          "ewer": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "ferry": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "flamingo": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "garfield": {
+            "robust_accuracy": 0.888889,
+            "robustness_drop": 0.111111,
+            "collapse_rate": 0.111111
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.75
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.5625,
+            "robustness_drop": 0.4375,
+            "collapse_rate": 0.4375
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "headphone": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "helicopter": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ibis": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.875,
+            "collapse_rate": 1.0
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.571429
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "ketch": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.571429
+          },
+          "lamp": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.714286
+          },
+          "laptop": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "llama": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.3,
+            "collapse_rate": 0.6
+          },
+          "mandolin": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "mayfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "menorah": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "nautilus": {
+            "robust_accuracy": 0.833333,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.166667
+          },
+          "octopus": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.75
+          },
+          "okapi": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "pagoda": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "panda": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "pigeon": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "pizza": {
+            "robust_accuracy": 0.714286,
+            "robustness_drop": 0.142857,
+            "collapse_rate": 0.285714
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.7,
+            "robustness_drop": 0.3,
+            "collapse_rate": 0.3
+          },
+          "revolver": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "rhino": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "rooster": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "saxophone": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "schooner": {
+            "robust_accuracy": 0.1,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.9
+          },
+          "scissors": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "scorpion": {
+            "robust_accuracy": 0.384615,
+            "robustness_drop": 0.615385,
+            "collapse_rate": 0.615385
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "snoopy": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.125,
+            "collapse_rate": 0.25
+          },
+          "stapler": {
+            "robust_accuracy": 0.571429,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.428571
+          },
+          "starfish": {
+            "robust_accuracy": 0.888889,
+            "robustness_drop": 0.111111,
+            "collapse_rate": 0.111111
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.6
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.916667,
+            "robustness_drop": 0.083333,
+            "collapse_rate": 0.083333
+          },
+          "tick": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "trilobite": {
+            "robust_accuracy": 0.818182,
+            "robustness_drop": 0.181818,
+            "collapse_rate": 0.181818
+          },
+          "umbrella": {
+            "robust_accuracy": 0.571429,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.428571
+          },
+          "watch": {
+            "robust_accuracy": 0.714286,
+            "robustness_drop": 0.214286,
+            "collapse_rate": 0.285714
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.714286,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.285714
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          }
+        },
+        "0.01": {
+          "Faces": {
+            "robust_accuracy": 0.71875,
+            "robustness_drop": 0.21875,
+            "collapse_rate": 0.28125
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.844444,
+            "robustness_drop": 0.111111,
+            "collapse_rate": 0.155556
+          },
+          "Leopards": {
+            "robust_accuracy": 0.571429,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.428571
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.786667,
+            "robustness_drop": 0.213333,
+            "collapse_rate": 0.213333
+          },
+          "accordion": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "airplanes": {
+            "robust_accuracy": 0.575758,
+            "robustness_drop": 0.424242,
+            "collapse_rate": 0.424242
+          },
+          "anchor": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "ant": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "barrel": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.571429
+          },
+          "binocular": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "bonsai": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "brain": {
+            "robust_accuracy": 0.7,
+            "robustness_drop": 0.3,
+            "collapse_rate": 0.3
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "butterfly": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "camera": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "cannon": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.4
+          },
+          "car_side": {
+            "robust_accuracy": 0.8,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.2
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "chair": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "chandelier": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.8,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.2
+          },
+          "crab": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.8
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.923077,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "dolphin": {
+            "robust_accuracy": 0.454545,
+            "robustness_drop": 0.454545,
+            "collapse_rate": 0.545455
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "emu": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "euphonium": {
+            "robust_accuracy": 0.833333,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.166667
+          },
+          "ewer": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "ferry": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "flamingo": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "garfield": {
+            "robust_accuracy": 0.555556,
+            "robustness_drop": 0.444444,
+            "collapse_rate": 0.444444
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.75
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.4375,
+            "robustness_drop": 0.5625,
+            "collapse_rate": 0.5625
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "headphone": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "helicopter": {
+            "robust_accuracy": 0.4375,
+            "robustness_drop": 0.5625,
+            "collapse_rate": 0.5625
+          },
+          "ibis": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.875,
+            "collapse_rate": 1.0
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.571429
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "ketch": {
+            "robust_accuracy": 0.357143,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.642857
+          },
+          "lamp": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.714286
+          },
+          "laptop": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "llama": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.3,
+            "collapse_rate": 0.6
+          },
+          "mandolin": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "mayfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "menorah": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.375
+          },
+          "nautilus": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "octopus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "okapi": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "pagoda": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "panda": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "pigeon": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "pizza": {
+            "robust_accuracy": 0.571429,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.428571
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "revolver": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "rhino": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "rooster": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "saxophone": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "schooner": {
+            "robust_accuracy": 0.1,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.9
+          },
+          "scissors": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "scorpion": {
+            "robust_accuracy": 0.307692,
+            "robustness_drop": 0.692308,
+            "collapse_rate": 0.692308
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "snoopy": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.375
+          },
+          "stapler": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "starfish": {
+            "robust_accuracy": 0.888889,
+            "robustness_drop": 0.111111,
+            "collapse_rate": 0.111111
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.833333,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.166667
+          },
+          "tick": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "trilobite": {
+            "robust_accuracy": 0.727273,
+            "robustness_drop": 0.272727,
+            "collapse_rate": 0.272727
+          },
+          "umbrella": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "watch": {
+            "robust_accuracy": 0.678571,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.321429
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.714286,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.285714
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          }
+        },
+        "0.02": {
+          "Faces": {
+            "robust_accuracy": 0.53125,
+            "robustness_drop": 0.40625,
+            "collapse_rate": 0.46875
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.8,
+            "robustness_drop": 0.155556,
+            "collapse_rate": 0.2
+          },
+          "Leopards": {
+            "robust_accuracy": 0.52381,
+            "robustness_drop": 0.47619,
+            "collapse_rate": 0.47619
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.733333,
+            "robustness_drop": 0.266667,
+            "collapse_rate": 0.266667
+          },
+          "accordion": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "airplanes": {
+            "robust_accuracy": 0.545455,
+            "robustness_drop": 0.454545,
+            "collapse_rate": 0.454545
+          },
+          "anchor": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "ant": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "barrel": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.571429
+          },
+          "binocular": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "bonsai": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "brain": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "butterfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "camera": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "cannon": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.4
+          },
+          "car_side": {
+            "robust_accuracy": 0.8,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.2
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "chair": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "chandelier": {
+            "robust_accuracy": 0.555556,
+            "robustness_drop": 0.444444,
+            "collapse_rate": 0.444444
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "crab": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.8
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.923077,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dolphin": {
+            "robust_accuracy": 0.363636,
+            "robustness_drop": 0.545455,
+            "collapse_rate": 0.636364
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "emu": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "euphonium": {
+            "robust_accuracy": 0.833333,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.166667
+          },
+          "ewer": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "ferry": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "flamingo": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "garfield": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.4375,
+            "robustness_drop": 0.5625,
+            "collapse_rate": 0.5625
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "headphone": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "helicopter": {
+            "robust_accuracy": 0.375,
+            "robustness_drop": 0.625,
+            "collapse_rate": 0.625
+          },
+          "ibis": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.875,
+            "collapse_rate": 1.0
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.571429
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "ketch": {
+            "robust_accuracy": 0.357143,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.642857
+          },
+          "lamp": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.714286
+          },
+          "laptop": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "llama": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.7
+          },
+          "mandolin": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "mayfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "menorah": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.375
+          },
+          "nautilus": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "octopus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "okapi": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "pagoda": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "panda": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "pigeon": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "pizza": {
+            "robust_accuracy": 0.571429,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.428571
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "revolver": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "rhino": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "rooster": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "saxophone": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "schooner": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.7,
+            "collapse_rate": 1.0
+          },
+          "scissors": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "scorpion": {
+            "robust_accuracy": 0.230769,
+            "robustness_drop": 0.769231,
+            "collapse_rate": 0.769231
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "snoopy": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.375
+          },
+          "stapler": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "starfish": {
+            "robust_accuracy": 0.777778,
+            "robustness_drop": 0.222222,
+            "collapse_rate": 0.222222
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "tick": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "trilobite": {
+            "robust_accuracy": 0.454545,
+            "robustness_drop": 0.545455,
+            "collapse_rate": 0.545455
+          },
+          "umbrella": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "watch": {
+            "robust_accuracy": 0.607143,
+            "robustness_drop": 0.321429,
+            "collapse_rate": 0.392857
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.714286,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.285714
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          }
+        },
+        "0.04": {
+          "Faces": {
+            "robust_accuracy": 0.5625,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.4375
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.822222,
+            "robustness_drop": 0.133333,
+            "collapse_rate": 0.177778
+          },
+          "Leopards": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.693333,
+            "robustness_drop": 0.306667,
+            "collapse_rate": 0.306667
+          },
+          "accordion": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "airplanes": {
+            "robust_accuracy": 0.515152,
+            "robustness_drop": 0.484848,
+            "collapse_rate": 0.484848
+          },
+          "anchor": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "ant": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "barrel": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.571429
+          },
+          "binocular": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "bonsai": {
+            "robust_accuracy": 0.416667,
+            "robustness_drop": 0.583333,
+            "collapse_rate": 0.583333
+          },
+          "brain": {
+            "robust_accuracy": 0.7,
+            "robustness_drop": 0.3,
+            "collapse_rate": 0.3
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "buddha": {
+            "robust_accuracy": 0.777778,
+            "robustness_drop": 0.222222,
+            "collapse_rate": 0.222222
+          },
+          "butterfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "camera": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "cannon": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.4
+          },
+          "car_side": {
+            "robust_accuracy": 0.8,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.2
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "chair": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "chandelier": {
+            "robust_accuracy": 0.555556,
+            "robustness_drop": 0.444444,
+            "collapse_rate": 0.444444
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "crab": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.2,
+            "collapse_rate": 0.8
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.923077,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "dolphin": {
+            "robust_accuracy": 0.363636,
+            "robustness_drop": 0.545455,
+            "collapse_rate": 0.636364
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "emu": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "euphonium": {
+            "robust_accuracy": 0.833333,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.166667
+          },
+          "ewer": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "ferry": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "flamingo": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "garfield": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "headphone": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "helicopter": {
+            "robust_accuracy": 0.375,
+            "robustness_drop": 0.625,
+            "collapse_rate": 0.625
+          },
+          "ibis": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.875,
+            "collapse_rate": 1.0
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.571429
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "ketch": {
+            "robust_accuracy": 0.357143,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.642857
+          },
+          "lamp": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.428571,
+            "collapse_rate": 0.714286
+          },
+          "laptop": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "llama": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.7
+          },
+          "mandolin": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "mayfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "menorah": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.375
+          },
+          "nautilus": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "octopus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "okapi": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "pagoda": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "panda": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "pigeon": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "pizza": {
+            "robust_accuracy": 0.571429,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.428571
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.5,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "revolver": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "rhino": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "rooster": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "saxophone": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "schooner": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.7,
+            "collapse_rate": 1.0
+          },
+          "scissors": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "scorpion": {
+            "robust_accuracy": 0.153846,
+            "robustness_drop": 0.846154,
+            "collapse_rate": 0.846154
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "snoopy": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.375
+          },
+          "stapler": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "starfish": {
+            "robust_accuracy": 0.777778,
+            "robustness_drop": 0.222222,
+            "collapse_rate": 0.222222
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "tick": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "trilobite": {
+            "robust_accuracy": 0.454545,
+            "robustness_drop": 0.545455,
+            "collapse_rate": 0.545455
+          },
+          "umbrella": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "watch": {
+            "robust_accuracy": 0.535714,
+            "robustness_drop": 0.392857,
+            "collapse_rate": 0.464286
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.714286,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.285714
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          }
+        }
+      }
+    },
+    "DenseNet121": {
+      "clean_accuracy": {
+        "Faces": 0.9375,
+        "Faces_easy": 0.977778,
+        "Leopards": 1.0,
+        "Motorbikes": 1.0,
+        "accordion": 1.0,
+        "airplanes": 1.0,
+        "anchor": 1.0,
+        "ant": 0.75,
+        "barrel": 0.857143,
+        "bass": 0.666667,
+        "beaver": 1.0,
+        "binocular": 1.0,
+        "bonsai": 1.0,
+        "brain": 1.0,
+        "brontosaurus": 1.0,
+        "buddha": 0.888889,
+        "butterfly": 1.0,
+        "camera": 1.0,
+        "cannon": 0.8,
+        "car_side": 1.0,
+        "ceiling_fan": 1.0,
+        "cellphone": 1.0,
+        "chair": 1.0,
+        "chandelier": 0.888889,
+        "cougar_body": 1.0,
+        "cougar_face": 1.0,
+        "crab": 0.6,
+        "crayfish": 0.769231,
+        "crocodile": 1.0,
+        "crocodile_head": 1.0,
+        "cup": 1.0,
+        "dalmatian": 1.0,
+        "dollar_bill": 1.0,
+        "dolphin": 1.0,
+        "dragonfly": 1.0,
+        "electric_guitar": 0.571429,
+        "elephant": 1.0,
+        "emu": 1.0,
+        "euphonium": 1.0,
+        "ewer": 1.0,
+        "ferry": 1.0,
+        "flamingo": 1.0,
+        "flamingo_head": 1.0,
+        "garfield": 1.0,
+        "gerenuk": 0.75,
+        "gramophone": 1.0,
+        "grand_piano": 1.0,
+        "hawksbill": 1.0,
+        "headphone": 1.0,
+        "hedgehog": 1.0,
+        "helicopter": 1.0,
+        "ibis": 0.875,
+        "inline_skate": 1.0,
+        "joshua_tree": 0.571429,
+        "kangaroo": 1.0,
+        "ketch": 0.785714,
+        "lamp": 1.0,
+        "laptop": 1.0,
+        "llama": 1.0,
+        "lobster": 1.0,
+        "lotus": 0.7,
+        "mandolin": 1.0,
+        "mayfly": 1.0,
+        "menorah": 1.0,
+        "metronome": 1.0,
+        "minaret": 1.0,
+        "nautilus": 1.0,
+        "octopus": 0.5,
+        "okapi": 1.0,
+        "pagoda": 1.0,
+        "panda": 1.0,
+        "pigeon": 1.0,
+        "pizza": 1.0,
+        "platypus": 1.0,
+        "pyramid": 1.0,
+        "revolver": 1.0,
+        "rhino": 1.0,
+        "rooster": 1.0,
+        "saxophone": 1.0,
+        "schooner": 0.8,
+        "scissors": 1.0,
+        "scorpion": 1.0,
+        "sea_horse": 1.0,
+        "snoopy": 1.0,
+        "soccer_ball": 0.875,
+        "stapler": 0.857143,
+        "starfish": 1.0,
+        "stegosaurus": 1.0,
+        "stop_sign": 1.0,
+        "strawberry": 1.0,
+        "sunflower": 1.0,
+        "tick": 1.0,
+        "trilobite": 1.0,
+        "umbrella": 1.0,
+        "watch": 0.964286,
+        "water_lilly": 1.0,
+        "wheelchair": 1.0,
+        "wild_cat": 1.0,
+        "windsor_chair": 1.0,
+        "wrench": 1.0,
+        "yin_yang": 1.0
+      },
+      "adversarial": {
+        "0.005": {
+          "Faces": {
+            "robust_accuracy": 0.21875,
+            "robustness_drop": 0.71875,
+            "collapse_rate": 0.78125
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.977778,
+            "collapse_rate": 1.0
+          },
+          "Leopards": {
+            "robust_accuracy": 0.714286,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.285714
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.413333,
+            "robustness_drop": 0.586667,
+            "collapse_rate": 0.586667
+          },
+          "accordion": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "airplanes": {
+            "robust_accuracy": 0.454545,
+            "robustness_drop": 0.545455,
+            "collapse_rate": 0.545455
+          },
+          "anchor": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "ant": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "barrel": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "binocular": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "bonsai": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "brain": {
+            "robust_accuracy": 0.7,
+            "robustness_drop": 0.3,
+            "collapse_rate": 0.3
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.555556,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.444444
+          },
+          "butterfly": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "camera": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "cannon": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.8
+          },
+          "car_side": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "chair": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "chandelier": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.777778
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "crab": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.8
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.769231,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "dolphin": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "emu": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "euphonium": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "ewer": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "ferry": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "flamingo": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "garfield": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.75
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.4375,
+            "robustness_drop": 0.5625,
+            "collapse_rate": 0.5625
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "headphone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "helicopter": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ibis": {
+            "robust_accuracy": 0.125,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.875
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.714286
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ketch": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.785714,
+            "collapse_rate": 1.0
+          },
+          "lamp": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "laptop": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "llama": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.7,
+            "collapse_rate": 1.0
+          },
+          "mandolin": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "mayfly": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "menorah": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.375,
+            "robustness_drop": 0.625,
+            "collapse_rate": 0.625
+          },
+          "nautilus": {
+            "robust_accuracy": 0.833333,
+            "robustness_drop": 0.166667,
+            "collapse_rate": 0.166667
+          },
+          "octopus": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.75
+          },
+          "okapi": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pagoda": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "panda": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "pigeon": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "pizza": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "revolver": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "rhino": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "rooster": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "saxophone": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "schooner": {
+            "robust_accuracy": 0.1,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.9
+          },
+          "scissors": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "scorpion": {
+            "robust_accuracy": 0.230769,
+            "robustness_drop": 0.769231,
+            "collapse_rate": 0.769231
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "snoopy": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.125,
+            "collapse_rate": 0.25
+          },
+          "stapler": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.714286
+          },
+          "starfish": {
+            "robust_accuracy": 0.777778,
+            "robustness_drop": 0.222222,
+            "collapse_rate": 0.222222
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "tick": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "trilobite": {
+            "robust_accuracy": 0.454545,
+            "robustness_drop": 0.545455,
+            "collapse_rate": 0.545455
+          },
+          "umbrella": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "watch": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.464286,
+            "collapse_rate": 0.5
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.571429
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          }
+        },
+        "0.01": {
+          "Faces": {
+            "robust_accuracy": 0.125,
+            "robustness_drop": 0.8125,
+            "collapse_rate": 0.875
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.977778,
+            "collapse_rate": 1.0
+          },
+          "Leopards": {
+            "robust_accuracy": 0.380952,
+            "robustness_drop": 0.619048,
+            "collapse_rate": 0.619048
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.253333,
+            "robustness_drop": 0.746667,
+            "collapse_rate": 0.746667
+          },
+          "accordion": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "airplanes": {
+            "robust_accuracy": 0.363636,
+            "robustness_drop": 0.636364,
+            "collapse_rate": 0.636364
+          },
+          "anchor": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "ant": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "barrel": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 1.0
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "binocular": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "bonsai": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "brain": {
+            "robust_accuracy": 0.6,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.4
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.777778
+          },
+          "butterfly": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "camera": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "cannon": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.8
+          },
+          "car_side": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "chair": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "chandelier": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.777778
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "crab": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.6,
+            "collapse_rate": 1.0
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.769231,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "dolphin": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "emu": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "euphonium": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ewer": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "ferry": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "flamingo": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "garfield": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.3125,
+            "robustness_drop": 0.6875,
+            "collapse_rate": 0.6875
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "headphone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "helicopter": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ibis": {
+            "robust_accuracy": 0.125,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.875
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.285714,
+            "collapse_rate": 0.714286
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ketch": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.785714,
+            "collapse_rate": 1.0
+          },
+          "lamp": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "laptop": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "llama": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.7,
+            "collapse_rate": 1.0
+          },
+          "mandolin": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "mayfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "menorah": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.125,
+            "robustness_drop": 0.875,
+            "collapse_rate": 0.875
+          },
+          "nautilus": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "octopus": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.75
+          },
+          "okapi": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pagoda": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "panda": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "pigeon": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "pizza": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "revolver": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "rhino": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "rooster": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "saxophone": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "schooner": {
+            "robust_accuracy": 0.1,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.9
+          },
+          "scissors": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "scorpion": {
+            "robust_accuracy": 0.153846,
+            "robustness_drop": 0.846154,
+            "collapse_rate": 0.846154
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "snoopy": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.375
+          },
+          "stapler": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "starfish": {
+            "robust_accuracy": 0.444444,
+            "robustness_drop": 0.555556,
+            "collapse_rate": 0.555556
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "tick": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "trilobite": {
+            "robust_accuracy": 0.181818,
+            "robustness_drop": 0.818182,
+            "collapse_rate": 0.818182
+          },
+          "umbrella": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "watch": {
+            "robust_accuracy": 0.464286,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.535714
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          }
+        },
+        "0.02": {
+          "Faces": {
+            "robust_accuracy": 0.1875,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.8125
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.977778,
+            "collapse_rate": 1.0
+          },
+          "Leopards": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.12,
+            "robustness_drop": 0.88,
+            "collapse_rate": 0.88
+          },
+          "accordion": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "airplanes": {
+            "robust_accuracy": 0.30303,
+            "robustness_drop": 0.69697,
+            "collapse_rate": 0.69697
+          },
+          "anchor": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "ant": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "barrel": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 1.0
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "binocular": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "bonsai": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "brain": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.888889
+          },
+          "butterfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "camera": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "cannon": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.8
+          },
+          "car_side": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          },
+          "chair": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "chandelier": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.888889
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "crab": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.6,
+            "collapse_rate": 1.0
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.769231,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "dolphin": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "emu": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "euphonium": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ewer": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "ferry": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "flamingo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "garfield": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.3125,
+            "robustness_drop": 0.6875,
+            "collapse_rate": 0.6875
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "headphone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "helicopter": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ibis": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.875,
+            "collapse_rate": 1.0
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 1.0
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ketch": {
+            "robust_accuracy": 0.071429,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.928571
+          },
+          "lamp": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "laptop": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "llama": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.1,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.9
+          },
+          "mandolin": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "mayfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "menorah": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.125,
+            "robustness_drop": 0.875,
+            "collapse_rate": 0.875
+          },
+          "nautilus": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "octopus": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.75
+          },
+          "okapi": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pagoda": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "panda": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pigeon": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pizza": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "revolver": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "rhino": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "rooster": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "saxophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "schooner": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "scissors": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "scorpion": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "snoopy": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.625,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.375
+          },
+          "stapler": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "starfish": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "tick": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "trilobite": {
+            "robust_accuracy": 0.090909,
+            "robustness_drop": 0.909091,
+            "collapse_rate": 0.909091
+          },
+          "umbrella": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "watch": {
+            "robust_accuracy": 0.428571,
+            "robustness_drop": 0.535714,
+            "collapse_rate": 0.571429
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          }
+        },
+        "0.04": {
+          "Faces": {
+            "robust_accuracy": 0.6875,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.3125
+          },
+          "Faces_easy": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.977778,
+            "collapse_rate": 1.0
+          },
+          "Leopards": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "Motorbikes": {
+            "robust_accuracy": 0.08,
+            "robustness_drop": 0.92,
+            "collapse_rate": 0.92
+          },
+          "accordion": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "airplanes": {
+            "robust_accuracy": 0.287879,
+            "robustness_drop": 0.712121,
+            "collapse_rate": 0.712121
+          },
+          "anchor": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "ant": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "barrel": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.857143
+          },
+          "bass": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 1.0
+          },
+          "beaver": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "binocular": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "bonsai": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "brain": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.7,
+            "collapse_rate": 0.7
+          },
+          "brontosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "buddha": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.777778
+          },
+          "butterfly": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.888889,
+            "collapse_rate": 0.888889
+          },
+          "camera": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "cannon": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.8
+          },
+          "car_side": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ceiling_fan": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cellphone": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "chair": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "chandelier": {
+            "robust_accuracy": 0.111111,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.888889
+          },
+          "cougar_body": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cougar_face": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "crab": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.6,
+            "collapse_rate": 1.0
+          },
+          "crayfish": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.769231,
+            "collapse_rate": 1.0
+          },
+          "crocodile": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "crocodile_head": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "cup": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "dalmatian": {
+            "robust_accuracy": 0.2,
+            "robustness_drop": 0.8,
+            "collapse_rate": 0.8
+          },
+          "dollar_bill": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "dolphin": {
+            "robust_accuracy": 0.090909,
+            "robustness_drop": 0.909091,
+            "collapse_rate": 0.909091
+          },
+          "dragonfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "electric_guitar": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 1.0
+          },
+          "elephant": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "emu": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "euphonium": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "ewer": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "ferry": {
+            "robust_accuracy": 0.222222,
+            "robustness_drop": 0.777778,
+            "collapse_rate": 0.777778
+          },
+          "flamingo": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "flamingo_head": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "garfield": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "gerenuk": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.75,
+            "collapse_rate": 1.0
+          },
+          "gramophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "grand_piano": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.75,
+            "collapse_rate": 0.75
+          },
+          "hawksbill": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "headphone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "hedgehog": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "helicopter": {
+            "robust_accuracy": 0.0625,
+            "robustness_drop": 0.9375,
+            "collapse_rate": 0.9375
+          },
+          "ibis": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.875,
+            "collapse_rate": 1.0
+          },
+          "inline_skate": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "joshua_tree": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 1.0
+          },
+          "kangaroo": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "ketch": {
+            "robust_accuracy": 0.214286,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.785714
+          },
+          "lamp": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "laptop": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "llama": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "lobster": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "lotus": {
+            "robust_accuracy": 0.3,
+            "robustness_drop": 0.4,
+            "collapse_rate": 0.7
+          },
+          "mandolin": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "mayfly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "menorah": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "metronome": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "minaret": {
+            "robust_accuracy": 0.125,
+            "robustness_drop": 0.875,
+            "collapse_rate": 0.875
+          },
+          "nautilus": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "octopus": {
+            "robust_accuracy": 0.25,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.75
+          },
+          "okapi": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pagoda": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "panda": {
+            "robust_accuracy": 0.166667,
+            "robustness_drop": 0.833333,
+            "collapse_rate": 0.833333
+          },
+          "pigeon": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pizza": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.714286,
+            "collapse_rate": 0.714286
+          },
+          "platypus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "pyramid": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "revolver": {
+            "robust_accuracy": 0.4,
+            "robustness_drop": 0.6,
+            "collapse_rate": 0.6
+          },
+          "rhino": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "rooster": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.5,
+            "collapse_rate": 0.5
+          },
+          "saxophone": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "schooner": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 0.8,
+            "collapse_rate": 1.0
+          },
+          "scissors": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "scorpion": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sea_horse": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "snoopy": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "soccer_ball": {
+            "robust_accuracy": 0.5,
+            "robustness_drop": 0.375,
+            "collapse_rate": 0.5
+          },
+          "stapler": {
+            "robust_accuracy": 0.285714,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.714286
+          },
+          "starfish": {
+            "robust_accuracy": 0.333333,
+            "robustness_drop": 0.666667,
+            "collapse_rate": 0.666667
+          },
+          "stegosaurus": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "stop_sign": {
+            "robust_accuracy": 1.0,
+            "robustness_drop": 0.0,
+            "collapse_rate": 0.0
+          },
+          "strawberry": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "sunflower": {
+            "robust_accuracy": 0.583333,
+            "robustness_drop": 0.416667,
+            "collapse_rate": 0.416667
+          },
+          "tick": {
+            "robust_accuracy": 0.666667,
+            "robustness_drop": 0.333333,
+            "collapse_rate": 0.333333
+          },
+          "trilobite": {
+            "robust_accuracy": 0.090909,
+            "robustness_drop": 0.909091,
+            "collapse_rate": 0.909091
+          },
+          "umbrella": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "watch": {
+            "robust_accuracy": 0.392857,
+            "robustness_drop": 0.571429,
+            "collapse_rate": 0.607143
+          },
+          "water_lilly": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wheelchair": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "wild_cat": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "windsor_chair": {
+            "robust_accuracy": 0.142857,
+            "robustness_drop": 0.857143,
+            "collapse_rate": 0.857143
+          },
+          "wrench": {
+            "robust_accuracy": 0.0,
+            "robustness_drop": 1.0,
+            "collapse_rate": 1.0
+          },
+          "yin_yang": {
+            "robust_accuracy": 0.75,
+            "robustness_drop": 0.25,
+            "collapse_rate": 0.25
+          }
+        }
+      }
+    }
+  }
+}

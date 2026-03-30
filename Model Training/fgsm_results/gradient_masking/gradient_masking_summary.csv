@@ -1,0 +1,4 @@
+Model,Gradient_Masking,Severity,Flags
+VGG19,True,moderate,gradient_norms_near_zero
+ResNet50,True,moderate,gradient_norms_near_zero
+DenseNet121,True,moderate,loss_landscape_non_monotonic

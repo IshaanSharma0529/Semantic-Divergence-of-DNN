@@ -1,0 +1,234 @@
+{
+  "gradient_norms": {
+    "VGG19": {
+      "mean_grad_norm": 1.3911514368163511,
+      "median_grad_norm": 0.0006485257181338966,
+      "std_grad_norm": 4.543694863104192,
+      "near_zero_fraction": 0.11047180667433831,
+      "min": 8.374576103625049e-16,
+      "max": 35.056644439697266,
+      "diagnosis": "masked"
+    },
+    "ResNet50": {
+      "mean_grad_norm": 3.020568705712301,
+      "median_grad_norm": 0.00024838195531629026,
+      "std_grad_norm": 12.971628671398571,
+      "near_zero_fraction": 0.19792865362485615,
+      "min": 7.408209462544946e-12,
+      "max": 112.10834503173828,
+      "diagnosis": "masked"
+    },
+    "DenseNet121": {
+      "mean_grad_norm": 2.383072309391383,
+      "median_grad_norm": 0.021079575642943382,
+      "std_grad_norm": 7.7175777796587,
+      "near_zero_fraction": 0.004602991944764097,
+      "min": 1.3265905707271486e-08,
+      "max": 59.04157638549805,
+      "diagnosis": "ok"
+    }
+  },
+  "restart_pgd": {
+    "VGG19": {
+      "eps_0.005": {
+        "single_restart_acc": 0.2647,
+        "multi_restart_acc": 0.2555,
+        "gap": 0.0092,
+        "diagnosis": "ok"
+      },
+      "eps_0.01": {
+        "single_restart_acc": 0.0633,
+        "multi_restart_acc": 0.0621,
+        "gap": 0.0012,
+        "diagnosis": "ok"
+      },
+      "eps_0.02": {
+        "single_restart_acc": 0.0334,
+        "multi_restart_acc": 0.0276,
+        "gap": 0.0058,
+        "diagnosis": "ok"
+      },
+      "eps_0.04": {
+        "single_restart_acc": 0.0207,
+        "multi_restart_acc": 0.0161,
+        "gap": 0.0046,
+        "diagnosis": "ok"
+      }
+    },
+    "ResNet50": {
+      "eps_0.005": {
+        "single_restart_acc": 0.1507,
+        "multi_restart_acc": 0.1427,
+        "gap": 0.0081,
+        "diagnosis": "ok"
+      },
+      "eps_0.01": {
+        "single_restart_acc": 0.0587,
+        "multi_restart_acc": 0.0564,
+        "gap": 0.0023,
+        "diagnosis": "ok"
+      },
+      "eps_0.02": {
+        "single_restart_acc": 0.0288,
+        "multi_restart_acc": 0.0242,
+        "gap": 0.0046,
+        "diagnosis": "ok"
+      },
+      "eps_0.04": {
+        "single_restart_acc": 0.0196,
+        "multi_restart_acc": 0.0104,
+        "gap": 0.0092,
+        "diagnosis": "ok"
+      }
+    },
+    "DenseNet121": {
+      "eps_0.005": {
+        "single_restart_acc": 0.0035,
+        "multi_restart_acc": 0.0023,
+        "gap": 0.0012,
+        "diagnosis": "ok"
+      },
+      "eps_0.01": {
+        "single_restart_acc": 0.0,
+        "multi_restart_acc": 0.0,
+        "gap": 0.0,
+        "diagnosis": "ok"
+      },
+      "eps_0.02": {
+        "single_restart_acc": 0.0,
+        "multi_restart_acc": 0.0,
+        "gap": 0.0,
+        "diagnosis": "ok"
+      },
+      "eps_0.04": {
+        "single_restart_acc": 0.0,
+        "multi_restart_acc": 0.0,
+        "gap": 0.0,
+        "diagnosis": "ok"
+      }
+    }
+  },
+  "monotonicity": {
+    "VGG19": {
+      "accuracies": [
+        {
+          "epsilon": 0.0,
+          "accuracy": 0.9356
+        },
+        {
+          "epsilon": 0.005,
+          "accuracy": 0.6007
+        },
+        {
+          "epsilon": 0.01,
+          "accuracy": 0.3809
+        },
+        {
+          "epsilon": 0.02,
+          "accuracy": 0.229
+        },
+        {
+          "epsilon": 0.04,
+          "accuracy": 0.1922
+        }
+      ],
+      "non_monotonic_pairs": [],
+      "diagnosis": "monotonic"
+    },
+    "ResNet50": {
+      "accuracies": [
+        {
+          "epsilon": 0.0,
+          "accuracy": 0.9482
+        },
+        {
+          "epsilon": 0.005,
+          "accuracy": 0.588
+        },
+        {
+          "epsilon": 0.01,
+          "accuracy": 0.5098
+        },
+        {
+          "epsilon": 0.02,
+          "accuracy": 0.4534
+        },
+        {
+          "epsilon": 0.04,
+          "accuracy": 0.4534
+        }
+      ],
+      "non_monotonic_pairs": [],
+      "diagnosis": "monotonic"
+    },
+    "DenseNet121": {
+      "accuracies": [
+        {
+          "epsilon": 0.0,
+          "accuracy": 0.9586
+        },
+        {
+          "epsilon": 0.005,
+          "accuracy": 0.3038
+        },
+        {
+          "epsilon": 0.01,
+          "accuracy": 0.2209
+        },
+        {
+          "epsilon": 0.02,
+          "accuracy": 0.1657
+        },
+        {
+          "epsilon": 0.04,
+          "accuracy": 0.1991
+        }
+      ],
+      "non_monotonic_pairs": [
+        {
+          "eps_low": 0.02,
+          "eps_high": 0.04,
+          "acc_low": 0.1657,
+          "acc_high": 0.1991,
+          "increase": 0.0334
+        }
+      ],
+      "diagnosis": "non_monotonic"
+    }
+  },
+  "verdict": {
+    "VGG19": {
+      "gradient_masking_detected": true,
+      "flags": [
+        "gradient_norms_near_zero"
+      ],
+      "severity": "moderate"
+    },
+    "ResNet50": {
+      "gradient_masking_detected": true,
+      "flags": [
+        "gradient_norms_near_zero"
+      ],
+      "severity": "moderate"
+    },
+    "DenseNet121": {
+      "gradient_masking_detected": true,
+      "flags": [
+        "loss_landscape_non_monotonic"
+      ],
+      "severity": "moderate"
+    }
+  },
+  "config": {
+    "n_restarts": 5,
+    "superiority_threshold": 0.05,
+    "pgd_steps": 10,
+    "epsilons": [
+      0.005,
+      0.01,
+      0.02,
+      0.04
+    ],
+    "seed": 42
+  }
+}

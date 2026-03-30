@@ -1,0 +1,4 @@
+Model,RAUC_normalized,RAUC_raw
+VGG19,0.12,0.004802
+ResNet50,0.1096,0.004384
+DenseNet121,0.0603,0.002414

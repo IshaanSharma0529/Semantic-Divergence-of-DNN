@@ -1,0 +1,106 @@
+# =============================================================================
+# CNN Training Configuration for CrossVision-Attacks
+# =============================================================================
+# This configuration is used for training VGG19, ResNet50, and DenseNet121
+# on the Caltech-101 dataset with fine-tuning for adversarial robustness research.
+
+# Dataset Configuration
+dataset:
+  name: "Caltech-101"
+  zip_file: "caltech-101.zip"
+  extract_dir: "caltech101_data"
+  num_classes: 101
+  
+# Data Split Configuration
+split:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+  seed: 42
+
+# Model Configuration
+models:
+  - name: "VGG19"
+    base: "keras.applications.VGG19"
+    params: ~143M
+    preprocessing: "caffe"  # BGR, mean subtraction
+    
+  - name: "ResNet50"
+    base: "keras.applications.ResNet50"
+    params: ~25M
+    preprocessing: "caffe"  # BGR, mean subtraction
+    
+  - name: "DenseNet121"
+    base: "keras.applications.DenseNet121"
+    params: ~7M
+    preprocessing: "torch"  # RGB, normalize [0,1], mean/std
+
+# Training Hyperparameters
+training:
+  img_size: [224, 224]
+  batch_size: 32
+  epochs: 50
+  learning_rate: 1.0e-4
+  optimizer: "Adam"
+  loss: "sparse_categorical_crossentropy"
+  
+# Fine-tuning Configuration
+fine_tuning:
+  layers_to_unfreeze: 20  # Unfreeze last 20 layers of base model
+  enabled: true
+
+# Early Stopping Configuration
+early_stopping:
+  monitor: "val_loss"
+  patience: 10
+  restore_best_weights: true
+  min_epochs: 20  # Don't stop before epoch 20 (ensures sufficient training)
+
+# Learning Rate Reduction
+lr_reduction:
+  monitor: "val_loss"
+  factor: 0.5
+  patience: 5
+  min_lr: 1.0e-7
+
+# Data Augmentation
+augmentation:
+  enabled: true
+  horizontal_flip: true
+  vertical_flip: true
+  brightness_range: 0.2
+  contrast_range: [0.8, 1.2]
+  saturation_range: [0.8, 1.2]
+  random_crop_fraction: [0.85, 1.0]
+
+# Class Weighting
+class_weights:
+  method: "balanced"  # sklearn compute_class_weight
+
+# Output Directories
+output:
+  checkpoints: "checkpoints/"
+  final_models: "final_models/"
+  attack_models: "attack_models/"
+  results: "results/"
+
+# Hardware Configuration (RTX 4060 8GB / RTX 3060 12GB)
+hardware:
+  mixed_precision: true
+  memory_growth: true
+  recommended_batch_size:
+    rtx_4060_8gb: 32
+    rtx_3060_12gb: 32
+
+# Reproducibility
+reproducibility:
+  seed: 42
+  deterministic: true
+
+# =============================================================================
+# Notes:
+# - ResNet50 used instead of ResNet101 for paper consistency
+# - Fine-tuning last 20 layers ensures genuine training on Caltech-101
+# - Minimum 20 epochs guarantees sufficient learning before early stopping
+# - Models exported in SavedModel format for ART/Foolbox compatibility
+# =============================================================================

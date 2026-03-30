@@ -1,0 +1,72 @@
+# ImageNet-100 Training Configuration
+# =====================================
+# Same architecture pipeline as Caltech-101, scaled to ImageNet-100
+# for external validity and generalizability claims.
+
+dataset:
+  name: imagenet-100
+  num_classes: 100
+  source: "ImageNet-1K subset (100 randomly selected classes)"
+  # Class selection: use scripts/prepare_imagenet100.py to select
+  # classes and create the directory structure.
+  img_size: [224, 224]
+  splits:
+    train: 0.8
+    val: 0.1
+    test: 0.1
+  # For ImageNet, we use the official train/val splits directly.
+  # A 100-class subset with balanced sampling (~1300 train imgs/class).
+
+training:
+  batch_size: 32
+  epochs: 50
+  optimizer:
+    name: adam
+    learning_rate: 1.0e-4
+  loss: categorical_crossentropy
+  label_smoothing: 0.1  # actually apply this time
+  callbacks:
+    early_stopping:
+      monitor: val_loss
+      patience: 10
+      restore_best_weights: true
+    reduce_lr:
+      monitor: val_loss
+      factor: 0.5
+      patience: 5
+      min_lr: 1.0e-7
+    model_checkpoint:
+      monitor: val_accuracy
+      save_best_only: true
+  seed: 42
+
+models:
+  - name: VGG19
+    preprocess_mode: caffe
+    frozen_epochs: 10     # train head-only first
+    fine_tune_from: block5_conv1
+  - name: ResNet50
+    preprocess_mode: caffe
+    frozen_epochs: 10
+    fine_tune_from: conv5_block1_1_conv
+  - name: DenseNet121
+    preprocess_mode: torch
+    frozen_epochs: 10
+    fine_tune_from: conv5_block1_0_bn
+
+attacks:
+  fgsm:
+    epsilons: [0.0, 0.005, 0.01, 0.02, 0.04]
+  pgd:
+    epsilons: [0.005, 0.01, 0.02, 0.04]
+    steps: 10
+    step_size_ratio: 0.25   # step_size = epsilon * ratio
+  deepfool:
+    max_iter: 50
+    overshoot: 0.02
+    num_candidates: 10
+
+output:
+  checkpoint_dir: "ImageNet100_Training/checkpoints"
+  results_dir: "ImageNet100_Training/results"
+  bank_dir: "ImageNet100_Training/adversarial_bank"
