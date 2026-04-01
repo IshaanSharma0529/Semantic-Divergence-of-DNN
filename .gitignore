@@ -90,3 +90,11 @@ Model Training/adversarial_bank/
 Model Training/attack_models/
 Model Training/checkpoints/
 Model Training/final_models/
+
+# ViT / Swin outputs (generated at runtime)
+Swin_Training/
+ImageNet100_Training/data/
+ImageNet100_Training/adversarial_bank/
+
+# HuggingFace model cache
+.cache/huggingface/

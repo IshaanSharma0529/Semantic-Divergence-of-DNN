@@ -1,0 +1,48 @@
+# =============================================================================
+# Swin Transformer Evaluation Configuration
+# =============================================================================
+# HuggingFace-based Swin-Tiny evaluation on ImageNet-100.
+# Parallel to imagenet100_training_config.yaml but for PyTorch/HF pipeline.
+
+model:
+  name: "SwinTiny"
+  hf_checkpoint: "microsoft/swin-tiny-patch4-window7-224"
+  num_hf_classes: 1000     # pretrained ImageNet-1K head
+  params: "~28M"
+  framework: "pytorch"
+
+dataset:
+  name: "ImageNet-100"
+  num_classes: 100
+  data_dir: "ImageNet100_Training/data"     # created by scripts/prepare_imagenet100.py
+  class_names_file: "ImageNet100_Training/class_names.txt"
+  class_mapping_file: "ImageNet100_Training/class_mapping.json"
+  img_size: [224, 224]
+  splits:
+    train: "train"
+    val: "val"
+    test: "test"
+
+evaluation:
+  batch_size: 32
+  num_workers: 4
+  seed: 42
+
+attacks:
+  fgsm:
+    epsilons: [0.005, 0.01, 0.02, 0.04]
+  pgd:
+    epsilons: [0.005, 0.01, 0.02, 0.04]
+    steps: 10
+    step_size_ratio: 0.25    # step_size = epsilon * ratio
+
+attention_analysis:
+  num_samples: 50            # images to analyze for attention/drift
+  save_per_layer: true       # save per-layer attention maps
+
+output:
+  base_dir: "Swin_Training"
+  clean_baselines: "Swin_Training/clean_baselines"
+  adversarial_results: "Swin_Training/adversarial_results"
+  figures: "Swin_Training/figures"
+  attention_analysis: "Swin_Training/attention_analysis"
