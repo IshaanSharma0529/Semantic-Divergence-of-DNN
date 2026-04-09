@@ -1,0 +1,48 @@
+# =============================================================================
+# ViT / Swin Transformer Requirements
+# =============================================================================
+# Install SEPARATELY from the TF stack (requirement.txt).
+# These packages use PyTorch — do NOT mix with tensorflow==2.15.1 in the
+# same conda/venv environment unless you know what you're doing.
+#
+# Recommended:  conda create -n swin python=3.10
+#               conda activate swin
+#               pip install -r VIT/requirements_vit.txt
+#
+# Hardware tested on: RTX 4060 (Ada Lovelace), RTX 3080 (Ampere)
+# Both support FP16 Tensor Cores → mixed precision via torch.cuda.amp
+# =============================================================================
+
+# ── PyTorch (CUDA 12.1 build) ──
+# Replace cu121 with cu118 if your CUDA version < 12.0
+torch==2.2.2
+torchvision==0.17.2
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# ── HuggingFace ecosystem ──
+transformers==4.40.2
+accelerate==0.29.3
+safetensors==0.4.3
+tokenizers==0.19.1
+huggingface-hub==0.23.0
+
+# ── Scientific stack (same versions as requirement.txt for cross-framework consistency) ──
+numpy==1.26.4
+scipy==1.11.4
+pandas==2.1.4
+pillow==10.4.0
+matplotlib==3.8.4
+
+# ── Saliency / explainability (optional but recommended for paper figures) ──
+grad-cam==1.5.2        # GradCAM + Attention Rollout for Swin (Jacob Gildenblat)
+
+# ── YAML parsing ──
+pyyaml==6.0.1
+
+# ── Progress & utilities ──
+tqdm==4.66.2
+rich==13.7.1
+
+# ── Jupyter (shared kernel) ──
+ipykernel==6.29.5
+ipython==8.18.1

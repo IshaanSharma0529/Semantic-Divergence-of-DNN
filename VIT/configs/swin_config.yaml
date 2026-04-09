@@ -5,16 +5,20 @@
 # Parallel to imagenet100_training_config.yaml but for PyTorch/HF pipeline.
 
 model:
-  name: "SwinTiny"
-  hf_checkpoint: "microsoft/swin-tiny-patch4-window7-224"
-  num_hf_classes: 1000     # pretrained ImageNet-1K head
-  params: "~28M"
+  name: "SwinBase"
+  # swin-base pretrained on ImageNet-22k + fine-tuned on ImageNet-1k (recommended for paper)
+  # swin-tiny is faster but weaker — use only for quick ablations
+  hf_checkpoint: "microsoft/swin-base-patch4-window7-224"
+  num_hf_classes: 1000     # pretrained ImageNet-1K head (replaced with 100-class head at runtime)
+  params: "~88M"
   framework: "pytorch"
 
 dataset:
   name: "ImageNet-100"
   num_classes: 100
-  data_dir: "ImageNet100_Training/data"     # created by scripts/prepare_imagenet100.py
+  # Run: python scripts/setup_imagenet100.py --zip /mnt/d/Ishaan-Research/Semantic-Divergence-of-DNN/archive.zip
+  zip_file: "/mnt/d/Ishaan-Research/Semantic-Divergence-of-DNN/archive.zip"
+  data_dir: "ImageNet100_Training/data"
   class_names_file: "ImageNet100_Training/class_names.txt"
   class_mapping_file: "ImageNet100_Training/class_mapping.json"
   img_size: [224, 224]
@@ -22,6 +26,17 @@ dataset:
     train: "train"
     val: "val"
     test: "test"
+
+training:
+  epochs: 20
+  frozen_epochs: 5          # head-only phase before backbone unfreeze
+  batch_size: 32
+  learning_rate: 1.0e-4
+  weight_decay: 0.05
+  min_lr: 1.0e-6
+  mixed_precision: true     # torch.cuda.amp — safe for training, NOT for attack gradients
+  num_workers: 4
+  seed: 42
 
 evaluation:
   batch_size: 32
@@ -35,6 +50,8 @@ attacks:
     epsilons: [0.005, 0.01, 0.02, 0.04]
     steps: 10
     step_size_ratio: 0.25    # step_size = epsilon * ratio
+  # NOTE: attack gradient computation always uses float32 regardless of mixed_precision
+  # autocast is only applied during the training forward/backward pass
 
 attention_analysis:
   num_samples: 50            # images to analyze for attention/drift
@@ -42,6 +59,7 @@ attention_analysis:
 
 output:
   base_dir: "Swin_Training"
+  checkpoints: "Swin_Training/checkpoints"
   clean_baselines: "Swin_Training/clean_baselines"
   adversarial_results: "Swin_Training/adversarial_results"
   figures: "Swin_Training/figures"

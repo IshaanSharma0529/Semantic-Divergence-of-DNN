@@ -1,0 +1,152 @@
+CODE REVIEW GRAPH — Semantic-Divergence-of-DNN
+================================================
+Paper: "Confidence, Geometric Robustness, and Semantic Coherence Diverge Under Adversarial Attack"
+Generated: 2026-04-08
+
+════════════════════════════════════════════════════════════════
+MODULE DEPENDENCY GRAPH  (static import analysis)
+════════════════════════════════════════════════════════════════
+
+LAYER 0 — Raw Datasets
+  caltech-101.zip        (132 MB, contains nested 101_ObjectCategories.tar.gz)
+  archive.zip            (17 GB,  Kaggle ImageNet-100: train.X1-4 + val.X)
+
+LAYER 1 — Data Setup
+  setup_caltech101.py    reads caltech-101.zip   → Model Training/caltech101_data/
+  setup_imagenet100.py   reads archive.zip        → ImageNet100_Training/data/
+
+LAYER 2 — Data Artifacts (produced)
+  checkpoints/*.h5                  ← Model_Training.ipynb
+  frozen_split_indices.json         ← Model_Training.ipynb  (seed=42, 869 samples)
+  ImageNet100_Training/data/        ← setup_imagenet100.py
+  Swin_Training/checkpoints/*.pt    ← train_swin.py
+
+LAYER 3 — Core Libraries (hub nodes)
+  src/shared_utils.py               [TF 2.15.1]
+    imports: tensorflow, keras, numpy, pandas, pathlib
+    exposes: load_test_split(), build_raw_test_dataset(), load_models(),
+             fgsm_attack(), pgd_attack(), deepfool_attack(),
+             evaluate_under_attack(), evaluate_pgd_attack()
+    in-degree: 7  (most imported module in project)
+
+  src/attacks/adversarial_bank.py   [stdlib only]
+    imports: numpy, json, pathlib
+    exposes: AdversarialBank class
+    in-degree: 1  (only build_adversarial_bank.py)
+
+  VIT/src/swin_utils.py             [PyTorch + HuggingFace]
+    imports: torch, transformers, PIL, yaml
+    exposes: ImageNet100Dataset, load_swin_model(),
+             fgsm_attack_swin(), pgd_attack_swin(), evaluate_clean()
+    in-degree: 1  (only train_swin.py)
+
+LAYER 4 — Training
+  Model Training/Model_Training.ipynb
+    produces → checkpoints/*.h5, frozen_split_indices.json, clean_baselines.json
+    data: caltech101_data/
+
+  VIT/train_swin.py
+    imports: swin_utils
+    data: ImageNet100_Training/data/
+    produces → Swin_Training/checkpoints/swin_base_imagenet100_best.pt
+
+  Model Training/cnn-attacks.ipynb   (origin notebook — now superseded)
+    All logic extracted → src/shared_utils.py
+    Bug: threw away adv_pred labels  (fixed in build_adversarial_bank.py)
+
+LAYER 5 — Experiments
+  build_adversarial_bank.py  [Task 2]
+    imports: shared_utils, adversarial_bank
+    data: checkpoints, frozen_split_indices.json
+    produces → adversarial_bank/{model}/{attack}_eps{e}/metadata.json
+
+  gradient_masking_test.py   [Task 1 ✓ COMPLETE]
+    imports: shared_utils
+    produces → fgsm_results/gradient_masking/gradient_masking_results.json
+
+  transfer_attack_matrix.py  [Task 3]
+    imports: shared_utils
+    data: adversarial_bank/ (pre-generated)
+    produces → fgsm_results/transfer_matrix/transfer_{fgsm,pgd}_eps*.csv
+
+  confusion_direction_analysis.py  [Task 4 ★ CORE CONTRIBUTION]
+    imports: shared_utils, scipy.stats
+    data: adversarial_bank/ (pre-generated)
+    produces → fgsm_results/confusion_analysis/semantic_structure_scores.csv
+    metric: SSS = 1 - H(C_off_diag) / H_max
+      low SSS  → random failures (DenseNet)
+      high SSS → structured failures (ResNet)
+
+LAYER 6 — Statistical Validation
+  multi_seed_runner.py   [Task 5a]
+    imports: shared_utils
+    runs FGSM+PGD for seeds {42, 123, 456}
+    produces → fgsm_results/multi_seed/multi_seed_per_sample.json
+
+  aggregate_results.py   [Task 5b]
+    imports: shared_utils (constants), scipy.stats
+    data: multi_seed/
+    produces → fgsm_results/multi_seed/bootstrap_confidence_intervals.csv
+               fgsm_results/multi_seed/wilcoxon_tests.csv
+
+LAYER 7 — Paper Outputs
+  results/                           (tables, figures, JSON summaries)
+  → IEEE TIFS submission
+
+════════════════════════════════════════════════════════════════
+IMPORT ADJACENCY LIST
+════════════════════════════════════════════════════════════════
+
+  build_adversarial_bank.py  →  shared_utils         (import)
+  build_adversarial_bank.py  →  adversarial_bank      (import)
+  gradient_masking_test.py   →  shared_utils         (import)
+  transfer_attack_matrix.py  →  shared_utils         (import)
+  confusion_direction.py     →  shared_utils         (import)
+  multi_seed_runner.py       →  shared_utils         (import)
+  aggregate_results.py       →  shared_utils         (import — constants only)
+  train_swin.py              →  swin_utils           (import)
+  shared_utils.py            →  adversarial_bank     (internal, minor)
+
+════════════════════════════════════════════════════════════════
+FAN-IN RANKING  (most-depended-on modules)
+════════════════════════════════════════════════════════════════
+
+  Rank 1: src/shared_utils.py               7 direct dependents  ← critical path
+  Rank 2: src/attacks/adversarial_bank.py   1 direct dependent
+  Rank 3: VIT/src/swin_utils.py             1 direct dependent
+
+  ⚠ shared_utils.py is a single point of failure — any change breaks all experiments.
+    It is marked "DO NOT MODIFY" in the project rules.
+
+════════════════════════════════════════════════════════════════
+EXECUTION ORDER  (run in this sequence)
+════════════════════════════════════════════════════════════════
+
+  [CNN stack — TF 2.15.1 environment]
+  1. python scripts/setup_caltech101.py
+  2. Run Model Training/Model_Training.ipynb  (trains CNNs, creates frozen split)
+  3. python experiments/gradient_masking_test.py     ← Task 1 (already done)
+  4. python experiments/build_adversarial_bank.py    ← Task 2
+  5. python experiments/transfer_attack_matrix.py    ← Task 3
+  6. python experiments/confusion_direction_analysis.py   ← Task 4 ★
+  7. python scripts/multi_seed_runner.py             ← Task 5a
+  8. python scripts/aggregate_results.py             ← Task 5b
+
+  [ViT stack — separate conda env: VIT/requirements_vit.txt]
+  9. python scripts/setup_imagenet100.py
+  10. python VIT/train_swin.py --epochs 20
+
+════════════════════════════════════════════════════════════════
+ENVIRONMENT SPLIT  (critical — do not mix)
+════════════════════════════════════════════════════════════════
+
+  conda env "tf"   — TF 2.15.1, numpy 1.26.4, scipy 1.11.4, pandas 2.1.4
+    Files: src/, experiments/, scripts/ (except setup_imagenet100.py)
+
+  conda env "swin" — PyTorch 2.2.2, transformers 4.40.2, accelerate 0.29.3
+    Files: VIT/src/, VIT/train_swin.py
+    Requirements: VIT/requirements_vit.txt
+
+════════════════════════════════════════════════════════════════
+END
+════════════════════════════════════════════════════════════════
