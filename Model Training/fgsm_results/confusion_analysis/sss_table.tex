@@ -1,0 +1,17 @@
+\begin{table}[h]
+\centering
+\caption{Semantic Structure Score (SSS) across models and attacks}
+\begin{tabular}{llcccc}
+\toprule
+Model & Attack & $\varepsilon=0.005$ & $\varepsilon=0.01$ & $\varepsilon=0.02$ & $\varepsilon=0.04$ \\
+\midrule
+VGG19 & FGSM & 0.399 & 0.366 & 0.347 & 0.343 \\
+ResNet50 & FGSM & 0.412 & 0.387 & 0.381 & 0.381 \\
+DenseNet121 & FGSM & 0.423 & 0.408 & 0.396 & 0.388 \\
+\midrule
+VGG19 & PGD & 0.358 & 0.348 & 0.346 & 0.340 \\
+ResNet50 & PGD & 0.370 & 0.366 & 0.361 & 0.361 \\
+DenseNet121 & PGD & 0.382 & 0.375 & 0.368 & 0.357 \\
+\bottomrule
+\end{tabular}
+\end{table}

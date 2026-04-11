@@ -1,0 +1,854 @@
+{
+  "VGG19_fgsm": [
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 5,
+      "adv_class": "airplanes",
+      "count": 11
+    },
+    {
+      "true_label": 55,
+      "true_class": "ketch",
+      "adv_label": 79,
+      "adv_class": "schooner",
+      "count": 9
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 6,
+      "adv_class": "anchor",
+      "count": 8
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 26,
+      "adv_class": "crab",
+      "count": 8
+    },
+    {
+      "true_label": 79,
+      "true_class": "schooner",
+      "adv_label": 55,
+      "adv_class": "ketch",
+      "count": 8
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 23,
+      "adv_class": "chandelier",
+      "count": 7
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 87,
+      "adv_class": "stegosaurus",
+      "count": 7
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 22,
+      "adv_class": "chair",
+      "count": 7
+    },
+    {
+      "true_label": 46,
+      "true_class": "grand_piano",
+      "adv_label": 22,
+      "adv_class": "chair",
+      "count": 6
+    },
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 39,
+      "adv_class": "ewer",
+      "count": 5
+    },
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 81,
+      "adv_class": "scorpion",
+      "count": 5
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 35,
+      "adv_class": "electric_guitar",
+      "count": 5
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 40,
+      "adv_class": "ferry",
+      "count": 5
+    },
+    {
+      "true_label": 19,
+      "true_class": "car_side",
+      "adv_label": 40,
+      "adv_class": "ferry",
+      "count": 5
+    },
+    {
+      "true_label": 76,
+      "true_class": "rhino",
+      "adv_label": 36,
+      "adv_class": "elephant",
+      "count": 5
+    },
+    {
+      "true_label": 0,
+      "true_class": "Faces",
+      "adv_label": 22,
+      "adv_class": "chair",
+      "count": 4
+    },
+    {
+      "true_label": 0,
+      "true_class": "Faces",
+      "adv_label": 37,
+      "adv_class": "emu",
+      "count": 4
+    },
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 11,
+      "adv_class": "binocular",
+      "count": 4
+    },
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 23,
+      "adv_class": "chandelier",
+      "count": 4
+    },
+    {
+      "true_label": 50,
+      "true_class": "helicopter",
+      "adv_label": 40,
+      "adv_class": "ferry",
+      "count": 4
+    }
+  ],
+  "ResNet50_fgsm": [
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 0,
+      "adv_class": "Faces",
+      "count": 8
+    },
+    {
+      "true_label": 79,
+      "true_class": "schooner",
+      "adv_label": 55,
+      "adv_class": "ketch",
+      "count": 8
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 50,
+      "adv_class": "helicopter",
+      "count": 7
+    },
+    {
+      "true_label": 50,
+      "true_class": "helicopter",
+      "adv_label": 5,
+      "adv_class": "airplanes",
+      "count": 7
+    },
+    {
+      "true_label": 55,
+      "true_class": "ketch",
+      "adv_label": 79,
+      "adv_class": "schooner",
+      "count": 7
+    },
+    {
+      "true_label": 51,
+      "true_class": "ibis",
+      "adv_label": 41,
+      "adv_class": "flamingo",
+      "count": 6
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 67,
+      "adv_class": "octopus",
+      "count": 5
+    },
+    {
+      "true_label": 94,
+      "true_class": "watch",
+      "adv_label": 18,
+      "adv_class": "cannon",
+      "count": 5
+    },
+    {
+      "true_label": 0,
+      "true_class": "Faces",
+      "adv_label": 1,
+      "adv_class": "Faces_easy",
+      "count": 4
+    },
+    {
+      "true_label": 2,
+      "true_class": "Leopards",
+      "adv_label": 97,
+      "adv_class": "wild_cat",
+      "count": 4
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 18,
+      "adv_class": "cannon",
+      "count": 4
+    },
+    {
+      "true_label": 28,
+      "true_class": "crocodile",
+      "adv_label": 29,
+      "adv_class": "crocodile_head",
+      "count": 4
+    },
+    {
+      "true_label": 60,
+      "true_class": "lotus",
+      "adv_label": 95,
+      "adv_class": "water_lilly",
+      "count": 4
+    },
+    {
+      "true_label": 81,
+      "true_class": "scorpion",
+      "adv_label": 27,
+      "adv_class": "crayfish",
+      "count": 4
+    },
+    {
+      "true_label": 7,
+      "true_class": "ant",
+      "adv_label": 27,
+      "adv_class": "crayfish",
+      "count": 3
+    },
+    {
+      "true_label": 27,
+      "true_class": "crayfish",
+      "adv_label": 62,
+      "adv_class": "mayfly",
+      "count": 3
+    },
+    {
+      "true_label": 30,
+      "true_class": "cup",
+      "adv_label": 39,
+      "adv_class": "ewer",
+      "count": 3
+    },
+    {
+      "true_label": 94,
+      "true_class": "watch",
+      "adv_label": 66,
+      "adv_class": "nautilus",
+      "count": 3
+    },
+    {
+      "true_label": 0,
+      "true_class": "Faces",
+      "adv_label": 39,
+      "adv_class": "ewer",
+      "count": 2
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 5,
+      "adv_class": "airplanes",
+      "count": 2
+    }
+  ],
+  "DenseNet121_fgsm": [
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 0,
+      "adv_class": "Faces",
+      "count": 43
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 96,
+      "adv_class": "wheelchair",
+      "count": 22
+    },
+    {
+      "true_label": 2,
+      "true_class": "Leopards",
+      "adv_label": 97,
+      "adv_class": "wild_cat",
+      "count": 16
+    },
+    {
+      "true_label": 0,
+      "true_class": "Faces",
+      "adv_label": 1,
+      "adv_class": "Faces_easy",
+      "count": 15
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 50,
+      "adv_class": "helicopter",
+      "count": 14
+    },
+    {
+      "true_label": 55,
+      "true_class": "ketch",
+      "adv_label": 79,
+      "adv_class": "schooner",
+      "count": 10
+    },
+    {
+      "true_label": 43,
+      "true_class": "garfield",
+      "adv_label": 83,
+      "adv_class": "snoopy",
+      "count": 8
+    },
+    {
+      "true_label": 46,
+      "true_class": "grand_piano",
+      "adv_label": 22,
+      "adv_class": "chair",
+      "count": 8
+    },
+    {
+      "true_label": 79,
+      "true_class": "schooner",
+      "adv_label": 55,
+      "adv_class": "ketch",
+      "count": 8
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 52,
+      "adv_class": "inline_skate",
+      "count": 6
+    },
+    {
+      "true_label": 50,
+      "true_class": "helicopter",
+      "adv_label": 5,
+      "adv_class": "airplanes",
+      "count": 6
+    },
+    {
+      "true_label": 60,
+      "true_class": "lotus",
+      "adv_label": 95,
+      "adv_class": "water_lilly",
+      "count": 6
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 14,
+      "adv_class": "brontosaurus",
+      "count": 5
+    },
+    {
+      "true_label": 34,
+      "true_class": "dragonfly",
+      "adv_label": 62,
+      "adv_class": "mayfly",
+      "count": 5
+    },
+    {
+      "true_label": 81,
+      "true_class": "scorpion",
+      "adv_label": 27,
+      "adv_class": "crayfish",
+      "count": 5
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 7,
+      "adv_class": "ant",
+      "count": 4
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 16,
+      "adv_class": "butterfly",
+      "count": 4
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 18,
+      "adv_class": "cannon",
+      "count": 4
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 55,
+      "adv_class": "ketch",
+      "count": 4
+    },
+    {
+      "true_label": 27,
+      "true_class": "crayfish",
+      "adv_label": 59,
+      "adv_class": "lobster",
+      "count": 4
+    }
+  ],
+  "VGG19_pgd": [
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 5,
+      "adv_class": "airplanes",
+      "count": 16
+    },
+    {
+      "true_label": 55,
+      "true_class": "ketch",
+      "adv_label": 79,
+      "adv_class": "schooner",
+      "count": 12
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 40,
+      "adv_class": "ferry",
+      "count": 9
+    },
+    {
+      "true_label": 79,
+      "true_class": "schooner",
+      "adv_label": 55,
+      "adv_class": "ketch",
+      "count": 9
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 87,
+      "adv_class": "stegosaurus",
+      "count": 8
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 6,
+      "adv_class": "anchor",
+      "count": 8
+    },
+    {
+      "true_label": 81,
+      "true_class": "scorpion",
+      "adv_label": 27,
+      "adv_class": "crayfish",
+      "count": 8
+    },
+    {
+      "true_label": 0,
+      "true_class": "Faces",
+      "adv_label": 22,
+      "adv_class": "chair",
+      "count": 7
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 23,
+      "adv_class": "chandelier",
+      "count": 7
+    },
+    {
+      "true_label": 19,
+      "true_class": "car_side",
+      "adv_label": 40,
+      "adv_class": "ferry",
+      "count": 7
+    },
+    {
+      "true_label": 46,
+      "true_class": "grand_piano",
+      "adv_label": 22,
+      "adv_class": "chair",
+      "count": 7
+    },
+    {
+      "true_label": 0,
+      "true_class": "Faces",
+      "adv_label": 37,
+      "adv_class": "emu",
+      "count": 6
+    },
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 37,
+      "adv_class": "emu",
+      "count": 6
+    },
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 39,
+      "adv_class": "ewer",
+      "count": 6
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 54,
+      "adv_class": "kangaroo",
+      "count": 6
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 56,
+      "adv_class": "lamp",
+      "count": 6
+    },
+    {
+      "true_label": 50,
+      "true_class": "helicopter",
+      "adv_label": 40,
+      "adv_class": "ferry",
+      "count": 6
+    },
+    {
+      "true_label": 98,
+      "true_class": "windsor_chair",
+      "adv_label": 22,
+      "adv_class": "chair",
+      "count": 6
+    },
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 11,
+      "adv_class": "binocular",
+      "count": 5
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 56,
+      "adv_class": "lamp",
+      "count": 5
+    }
+  ],
+  "ResNet50_pgd": [
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 0,
+      "adv_class": "Faces",
+      "count": 26
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 67,
+      "adv_class": "octopus",
+      "count": 25
+    },
+    {
+      "true_label": 0,
+      "true_class": "Faces",
+      "adv_label": 1,
+      "adv_class": "Faces_easy",
+      "count": 18
+    },
+    {
+      "true_label": 55,
+      "true_class": "ketch",
+      "adv_label": 79,
+      "adv_class": "schooner",
+      "count": 10
+    },
+    {
+      "true_label": 90,
+      "true_class": "sunflower",
+      "adv_label": 95,
+      "adv_class": "water_lilly",
+      "count": 10
+    },
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 10,
+      "adv_class": "beaver",
+      "count": 8
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 26,
+      "adv_class": "crab",
+      "count": 8
+    },
+    {
+      "true_label": 50,
+      "true_class": "helicopter",
+      "adv_label": 5,
+      "adv_class": "airplanes",
+      "count": 8
+    },
+    {
+      "true_label": 79,
+      "true_class": "schooner",
+      "adv_label": 55,
+      "adv_class": "ketch",
+      "count": 8
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 16,
+      "adv_class": "butterfly",
+      "count": 6
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 17,
+      "adv_class": "camera",
+      "count": 6
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 18,
+      "adv_class": "cannon",
+      "count": 6
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 22,
+      "adv_class": "chair",
+      "count": 6
+    },
+    {
+      "true_label": 46,
+      "true_class": "grand_piano",
+      "adv_label": 85,
+      "adv_class": "stapler",
+      "count": 6
+    },
+    {
+      "true_label": 2,
+      "true_class": "Leopards",
+      "adv_label": 97,
+      "adv_class": "wild_cat",
+      "count": 5
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 96,
+      "adv_class": "wheelchair",
+      "count": 5
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 50,
+      "adv_class": "helicopter",
+      "count": 5
+    },
+    {
+      "true_label": 12,
+      "true_class": "bonsai",
+      "adv_label": 82,
+      "adv_class": "sea_horse",
+      "count": 5
+    },
+    {
+      "true_label": 43,
+      "true_class": "garfield",
+      "adv_label": 83,
+      "adv_class": "snoopy",
+      "count": 5
+    },
+    {
+      "true_label": 51,
+      "true_class": "ibis",
+      "adv_label": 41,
+      "adv_class": "flamingo",
+      "count": 5
+    }
+  ],
+  "DenseNet121_pgd": [
+    {
+      "true_label": 1,
+      "true_class": "Faces_easy",
+      "adv_label": 0,
+      "adv_class": "Faces",
+      "count": 40
+    },
+    {
+      "true_label": 0,
+      "true_class": "Faces",
+      "adv_label": 1,
+      "adv_class": "Faces_easy",
+      "count": 26
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 96,
+      "adv_class": "wheelchair",
+      "count": 19
+    },
+    {
+      "true_label": 2,
+      "true_class": "Leopards",
+      "adv_label": 97,
+      "adv_class": "wild_cat",
+      "count": 13
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 50,
+      "adv_class": "helicopter",
+      "count": 12
+    },
+    {
+      "true_label": 55,
+      "true_class": "ketch",
+      "adv_label": 79,
+      "adv_class": "schooner",
+      "count": 11
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 16,
+      "adv_class": "butterfly",
+      "count": 10
+    },
+    {
+      "true_label": 50,
+      "true_class": "helicopter",
+      "adv_label": 5,
+      "adv_class": "airplanes",
+      "count": 9
+    },
+    {
+      "true_label": 43,
+      "true_class": "garfield",
+      "adv_label": 83,
+      "adv_class": "snoopy",
+      "count": 8
+    },
+    {
+      "true_label": 46,
+      "true_class": "grand_piano",
+      "adv_label": 22,
+      "adv_class": "chair",
+      "count": 8
+    },
+    {
+      "true_label": 79,
+      "true_class": "schooner",
+      "adv_label": 55,
+      "adv_class": "ketch",
+      "count": 7
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 7,
+      "adv_class": "ant",
+      "count": 6
+    },
+    {
+      "true_label": 34,
+      "true_class": "dragonfly",
+      "adv_label": 62,
+      "adv_class": "mayfly",
+      "count": 6
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 50,
+      "adv_class": "helicopter",
+      "count": 5
+    },
+    {
+      "true_label": 3,
+      "true_class": "Motorbikes",
+      "adv_label": 94,
+      "adv_class": "watch",
+      "count": 5
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 62,
+      "adv_class": "mayfly",
+      "count": 5
+    },
+    {
+      "true_label": 19,
+      "true_class": "car_side",
+      "adv_label": 17,
+      "adv_class": "camera",
+      "count": 5
+    },
+    {
+      "true_label": 60,
+      "true_class": "lotus",
+      "adv_label": 95,
+      "adv_class": "water_lilly",
+      "count": 5
+    },
+    {
+      "true_label": 90,
+      "true_class": "sunflower",
+      "adv_label": 60,
+      "adv_class": "lotus",
+      "count": 5
+    },
+    {
+      "true_label": 5,
+      "true_class": "airplanes",
+      "adv_label": 14,
+      "adv_class": "brontosaurus",
+      "count": 4
+    }
+  ]
+}

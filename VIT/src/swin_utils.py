@@ -15,6 +15,7 @@ from torch.utils.data import Dataset, DataLoader
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 from PIL import Image
+from scipy.stats import entropy as scipy_entropy
 from transformers import SwinForImageClassification, AutoImageProcessor
 
 warnings.filterwarnings('ignore')
@@ -413,3 +414,414 @@ def evaluate_under_attack(
         'mean_adv_conf': float(np.mean(adv_confs)),
         'total_samples': total,
     }
+
+
+# ────────────────────────────────────────────────────────────────
+# DEEPFOOL ATTACK
+# ────────────────────────────────────────────────────────────────
+
+def deepfool_attack_swin(
+    model: SwinForImageClassification,
+    pixel_values: torch.Tensor,
+    labels: torch.Tensor,
+    max_iter: int = 50,
+    overshoot: float = 0.02,
+    num_classes: int = 100,
+    top_k_candidates: int = 10,
+) -> Tuple[torch.Tensor, torch.Tensor]:
+    """DeepFool minimal-perturbation attack for HuggingFace Swin.
+
+    Iteratively finds the nearest decision boundary and steps across it.
+    Only evaluates gradients for the top-K candidate classes per iteration
+    for efficiency (typically finds the same boundary as full evaluation).
+
+    Args:
+        model: Swin in eval mode
+        pixel_values: [B, 3, 224, 224] ImageNet-normalized
+        labels: [B] true class indices
+        max_iter: max perturbation steps per sample
+        overshoot: extra step beyond the boundary (0.02 = 2%)
+        num_classes: total number of classes
+        top_k_candidates: only consider top-K logit classes per step
+
+    Returns:
+        (adv_pixel_values [B, 3, 224, 224], l2_distances [B])
+    """
+    device = pixel_values.device
+    data_min = pixel_values.min().item()
+    data_max = pixel_values.max().item()
+    model.eval()
+    results, l2_dists = [], []
+
+    for i in range(pixel_values.size(0)):
+        x_orig = pixel_values[i:i+1].clone().detach()  # [1, 3, 224, 224]
+        xi = x_orig.clone()
+        true_lbl = int(labels[i].item())
+
+        for _ in range(max_iter):
+            xi_var = xi.detach().requires_grad_(True)
+            with torch.enable_grad():
+                out = model(pixel_values=xi_var)
+                logits = out.logits[0]  # [num_classes]
+
+            pred = int(logits.argmax().item())
+            if pred != true_lbl:
+                break  # already fooled
+
+            # Gradient of true-class logit
+            with torch.enable_grad():
+                g_true = torch.autograd.grad(
+                    logits[true_lbl], xi_var,
+                    create_graph=False, retain_graph=True
+                )[0].detach()
+
+            # Top-K candidates (exclude true class)
+            topk_scores, topk_idx = logits.detach().topk(top_k_candidates + 1)
+            candidate_classes = [int(k) for k in topk_idx.tolist() if k != true_lbl][:top_k_candidates]
+
+            min_ratio = float('inf')
+            best_pert = torch.zeros_like(xi)
+
+            for k in candidate_classes:
+                xi_k = xi.detach().requires_grad_(True)
+                with torch.enable_grad():
+                    out_k = model(pixel_values=xi_k).logits[0]
+                    g_k = torch.autograd.grad(
+                        out_k[k], xi_k, create_graph=False
+                    )[0].detach()
+
+                w = (g_k - g_true)
+                f = float((out_k[k] - out_k[true_lbl]).detach())
+                w_norm = float(w.norm()) + 1e-8
+                ratio = abs(f) / w_norm
+                if ratio < min_ratio:
+                    min_ratio = ratio
+                    best_pert = (abs(f) / (w_norm ** 2)) * w
+
+            xi = (xi.detach() + (1 + overshoot) * best_pert).clamp(data_min, data_max)
+
+        l2_dists.append(float((xi - x_orig).norm().item()))
+        results.append(xi.detach())
+
+    return torch.cat(results, dim=0), torch.tensor(l2_dists, device=device)
+
+
+# ────────────────────────────────────────────────────────────────
+# NORMALIZATION UTILITIES
+# ────────────────────────────────────────────────────────────────
+
+IMAGENET_MEAN = torch.tensor([0.485, 0.456, 0.406]).view(1, 3, 1, 1)
+IMAGENET_STD  = torch.tensor([0.229, 0.224, 0.225]).view(1, 3, 1, 1)
+
+
+def normalize_imagenet(x: torch.Tensor) -> torch.Tensor:
+    """Normalize [0,1] raw images to ImageNet-normalized space.
+
+    x: [B, 3, H, W] or [3, H, W] in [0, 1]
+    Returns same shape, normalized.
+    """
+    mean = IMAGENET_MEAN.to(x.device)
+    std  = IMAGENET_STD.to(x.device)
+    return (x - mean) / std
+
+
+def denormalize_imagenet(x: torch.Tensor) -> torch.Tensor:
+    """Invert ImageNet normalization back to [0, 1] space."""
+    mean = IMAGENET_MEAN.to(x.device)
+    std  = IMAGENET_STD.to(x.device)
+    return (x * std + mean).clamp(0.0, 1.0)
+
+
+def total_variation_loss(x: torch.Tensor) -> torch.Tensor:
+    """Anisotropic total variation regularization.
+
+    x: [B, 3, H, W] in [0, 1]
+    Returns scalar.
+    """
+    diff_h = (x[..., 1:, :] - x[..., :-1, :]).abs().sum()
+    diff_w = (x[..., :, 1:] - x[..., :, :-1]).abs().sum()
+    return diff_h + diff_w
+
+
+# ────────────────────────────────────────────────────────────────
+# FEATURE EXTRACTION
+# ────────────────────────────────────────────────────────────────
+
+@torch.no_grad()
+def extract_swin_features(
+    model: SwinForImageClassification,
+    pixel_values: torch.Tensor,
+) -> torch.Tensor:
+    """Extract GAP features (pooler_output) from Swin: [B, 1024].
+
+    These are the features fed directly into the classifier head.
+    pixel_values should already be ImageNet-normalized.
+    """
+    outputs = model.swin(pixel_values=pixel_values)
+    return outputs.pooler_output  # [B, 1024]
+
+
+@torch.no_grad()
+def extract_swin_spatial_features(
+    model: SwinForImageClassification,
+    pixel_values: torch.Tensor,
+) -> torch.Tensor:
+    """Extract spatial token features from Swin: [B, 49, 1024].
+
+    Pre-pooling token features — 49 tokens, each covering a
+    32×32-pixel receptive field in the 224×224 input.
+    pixel_values should already be ImageNet-normalized.
+    """
+    outputs = model.swin(pixel_values=pixel_values)
+    return outputs.last_hidden_state  # [B, 49, 1024]
+
+
+# ────────────────────────────────────────────────────────────────
+# FEATURE INVERSION
+# ────────────────────────────────────────────────────────────────
+
+class _SwinInverter:
+    """Batch feature inverter for Swin Transformer (PyTorch).
+
+    Optimizes N raw [0,1] images in parallel so that their
+    ImageNet-normalized GAP features match the given target vectors.
+    Uses Adam with TV regularization, same design as the TF CNN inverter.
+    """
+
+    def invert_batch(
+        self,
+        model: SwinForImageClassification,
+        target_features: np.ndarray,   # (N, 1024) GAP feature targets
+        init_images_01: np.ndarray,    # (N, H, W, 3) in [0,1], HWC
+        device: torch.device,
+        steps: int = 100,
+        lr: float = 0.01,
+        tv_weight: float = 1e-4,
+    ) -> np.ndarray:                   # (N, H, W, 3) in [0,1], HWC
+        """Optimize N images in parallel to match N target feature vectors."""
+        # Convert HWC → CHW, numpy → tensor
+        init_chw = init_images_01.transpose(0, 3, 1, 2).astype(np.float32)
+        img_param = torch.nn.Parameter(
+            torch.tensor(init_chw, device=device)
+        )
+        target_t = torch.tensor(target_features, dtype=torch.float32, device=device)
+        optimizer = torch.optim.Adam([img_param], lr=lr)
+
+        prev_loss = float('inf')
+        model.eval()
+        for step in range(steps):
+            optimizer.zero_grad()
+            # Clamp to [0,1], then normalize for the model
+            img_clamped = img_param.clamp(0.0, 1.0)
+            pixel_values = normalize_imagenet(img_clamped)
+            # Extract features (with grad)
+            outputs = model.swin(pixel_values=pixel_values)
+            feats = outputs.pooler_output  # [N, 1024]
+
+            feat_loss = F.mse_loss(feats, target_t)
+            tv_loss   = total_variation_loss(img_clamped)
+            loss      = feat_loss + tv_weight * tv_loss
+            loss.backward()
+            optimizer.step()
+
+            with torch.no_grad():
+                img_param.clamp_(0.0, 1.0)
+
+            if step % 10 == 0:
+                lv = loss.item()
+                if lv < 1e-4 or (prev_loss - lv) < 1e-7 * max(prev_loss, 1e-8):
+                    break
+                prev_loss = lv
+
+        result = img_param.detach().cpu().numpy()   # [N, 3, H, W]
+        return result.transpose(0, 2, 3, 1)         # [N, H, W, 3]
+
+
+_swin_inverter = _SwinInverter()
+
+
+def invert_features_batch_swin(
+    model: SwinForImageClassification,
+    target_features: np.ndarray,
+    init_images_01: np.ndarray,
+    device: torch.device,
+    steps: int = 100,
+    lr: float = 0.01,
+    tv_weight: float = 1e-4,
+) -> np.ndarray:
+    """Invert N feature vectors to N images in parallel.
+
+    Args:
+        model: Swin in eval mode
+        target_features: (N, 1024) GAP feature targets
+        init_images_01: (N, H, W, 3) in [0, 1] HWC initialization
+        device: torch device
+        steps: max Adam steps
+        lr: Adam learning rate
+        tv_weight: total variation regularization weight
+
+    Returns:
+        (N, H, W, 3) images in [0, 1]
+    """
+    return _swin_inverter.invert_batch(
+        model, target_features, init_images_01, device, steps, lr, tv_weight
+    )
+
+
+def invert_features_swin(
+    model: SwinForImageClassification,
+    target_feature: np.ndarray,
+    init_image_01: np.ndarray,
+    device: torch.device,
+    steps: int = 100,
+    lr: float = 0.01,
+    tv_weight: float = 1e-4,
+) -> np.ndarray:
+    """Invert a single feature vector to an image. Calls invert_features_batch_swin."""
+    return invert_features_batch_swin(
+        model,
+        target_feature[np.newaxis, :],
+        init_image_01[np.newaxis, :],
+        device, steps, lr, tv_weight,
+    )[0]
+
+
+# ────────────────────────────────────────────────────────────────
+# ADAIN STYLE TRANSFER  (spatial, avoids 1-D degeneracy)
+# ────────────────────────────────────────────────────────────────
+
+def adain_style_transfer_swin(
+    model: SwinForImageClassification,
+    content_img_01: np.ndarray,                    # (H, W, 3) in [0,1]
+    style_img_01: np.ndarray,                      # (H, W, 3) in [0,1]
+    device: torch.device,
+    alpha: float = 1.0,
+    content_spatial_feat: Optional[np.ndarray] = None,  # (49, 1024) pre-computed
+    style_spatial_feat: Optional[np.ndarray] = None,    # (49, 1024) pre-computed
+    steps: int = 75,
+    lr: float = 0.01,
+    tv_weight: float = 1e-4,
+) -> np.ndarray:
+    """Spatial AdaIN style transfer using Swin token features.
+
+    Uses pre-pooling token features [49, 1024] so AdaIN computes
+    per-channel statistics across tokens (not a degenerate scalar op).
+    The style target is then GAP'd for the inversion step.
+
+    Returns:
+        (H, W, 3) adversarial image in [0, 1]
+    """
+    model.eval()
+
+    def _to_pixel_values(img_01: np.ndarray) -> torch.Tensor:
+        t = torch.tensor(img_01.transpose(2, 0, 1)[np.newaxis], dtype=torch.float32, device=device)
+        return normalize_imagenet(t)  # [1, 3, 224, 224]
+
+    if content_spatial_feat is None:
+        with torch.no_grad():
+            content_spatial_feat = (
+                model.swin(pixel_values=_to_pixel_values(content_img_01))
+                .last_hidden_state[0].cpu().numpy()
+            )  # (49, 1024)
+
+    if style_spatial_feat is None:
+        with torch.no_grad():
+            style_spatial_feat = (
+                model.swin(pixel_values=_to_pixel_values(style_img_01))
+                .last_hidden_state[0].cpu().numpy()
+            )  # (49, 1024)
+
+    # Per-channel statistics over 49 token positions
+    c_mean = content_spatial_feat.mean(axis=0)        # (1024,)
+    c_std  = content_spatial_feat.std(axis=0) + 1e-8  # (1024,)
+    s_mean = style_spatial_feat.mean(axis=0)           # (1024,)
+    s_std  = style_spatial_feat.std(axis=0) + 1e-8    # (1024,)
+
+    # AdaIN: per-token, per-channel normalization with style stats
+    adain_tokens = (content_spatial_feat - c_mean) / c_std * s_std + s_mean  # (49, 1024)
+    blended_tokens = alpha * adain_tokens + (1 - alpha) * content_spatial_feat
+
+    # GAP blended tokens → single 1024-d target for the inverter
+    blended_gap = blended_tokens.mean(axis=0)  # (1024,)
+
+    return invert_features_batch_swin(
+        model,
+        blended_gap[np.newaxis, :],         # (1, 1024)
+        content_img_01[np.newaxis, :],      # (1, H, W, 3)
+        device, steps, lr, tv_weight,
+    )[0]  # (H, W, 3)
+
+
+# ────────────────────────────────────────────────────────────────
+# SEMANTIC STRUCTURE SCORE
+# ────────────────────────────────────────────────────────────────
+
+def compute_sss_from_confusion(confusion_matrix: np.ndarray) -> float:
+    """Compute Semantic Structure Score from a confusion matrix.
+
+    SSS = 1 - H(off_diagonal) / H_max
+    where H is Shannon entropy of the off-diagonal element distribution.
+
+    SSS ≈ 1: misclassifications concentrate on few target classes (semantic).
+    SSS ≈ 0: uniform scatter across all classes (random noise).
+    """
+    num_classes = confusion_matrix.shape[0]
+    mask = ~np.eye(num_classes, dtype=bool)
+    off_diag = confusion_matrix[mask].flatten().astype(float)
+    total_off = off_diag.sum()
+
+    if total_off == 0:
+        return 1.0
+
+    probs = off_diag / total_off
+    H     = float(scipy_entropy(probs + 1e-12, base=2))
+    H_max = float(np.log2(len(off_diag)))
+
+    return round(1.0 - (H / H_max), 6) if H_max > 0 else 1.0
+
+
+def build_adversarial_confusion_swin(
+    model: SwinForImageClassification,
+    dataloader: DataLoader,
+    device: torch.device,
+    attack_fn,
+    epsilon: float,
+    num_classes: int = 100,
+    **attack_kwargs,
+) -> Tuple[np.ndarray, List[dict]]:
+    """Build confusion matrix under adversarial attack.
+
+    Returns:
+        C: (num_classes, num_classes) integer confusion matrix — C[true, adv_pred]
+        records: per-sample misclassification dicts (true_label, adv_pred, adv_confidence)
+    """
+    C = np.zeros((num_classes, num_classes), dtype=np.int32)
+    records = []
+    model.eval()
+
+    for pixel_values, labels in dataloader:
+        pixel_values = pixel_values.to(device)
+        labels_t = (
+            labels.to(device)
+            if isinstance(labels, torch.Tensor)
+            else torch.tensor(labels, device=device)
+        )
+
+        adv = attack_fn(model, pixel_values, labels_t, epsilon, **attack_kwargs)
+
+        with torch.no_grad():
+            adv_probs = F.softmax(model(pixel_values=adv).logits, dim=-1)
+        adv_conf, adv_pred = adv_probs.max(dim=-1)
+
+        for j in range(labels_t.size(0)):
+            t = int(labels_t[j].item())
+            p = int(adv_pred[j].item())
+            C[t, p] += 1
+            if t != p:
+                records.append({
+                    'true_label': t,
+                    'adv_pred': p,
+                    'adv_confidence': round(float(adv_conf[j].item()), 4),
+                })
+
+    return C, records

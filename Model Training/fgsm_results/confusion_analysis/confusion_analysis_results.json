@@ -1,0 +1,2750 @@
+{
+  "VGG19_fgsm_eps0.005": {
+    "sss": 0.398929,
+    "total_misclassified": 363,
+    "top_pairs": [
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 4
+      },
+      {
+        "true_label": 23,
+        "true_class": "chandelier",
+        "adv_label": 63,
+        "adv_class": "menorah",
+        "count": 4
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 4
+      },
+      {
+        "true_label": 51,
+        "true_class": "ibis",
+        "adv_label": 41,
+        "adv_class": "flamingo",
+        "count": 4
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 4
+      },
+      {
+        "true_label": 74,
+        "true_class": "pyramid",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 4
+      },
+      {
+        "true_label": 81,
+        "true_class": "scorpion",
+        "adv_label": 27,
+        "adv_class": "crayfish",
+        "count": 4
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 3
+      }
+    ]
+  },
+  "ResNet50_fgsm_eps0.005": {
+    "sss": 0.411716,
+    "total_misclassified": 348,
+    "top_pairs": [
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 9
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 6
+      },
+      {
+        "true_label": 51,
+        "true_class": "ibis",
+        "adv_label": 41,
+        "adv_class": "flamingo",
+        "count": 6
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 5
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 5
+      },
+      {
+        "true_label": 81,
+        "true_class": "scorpion",
+        "adv_label": 27,
+        "adv_class": "crayfish",
+        "count": 5
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 4
+      },
+      {
+        "true_label": 28,
+        "true_class": "crocodile",
+        "adv_label": 29,
+        "adv_class": "crocodile_head",
+        "count": 4
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 3
+      }
+    ]
+  },
+  "DenseNet121_fgsm_eps0.005": {
+    "sss": 0.42314,
+    "total_misclassified": 589,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 43
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 23
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 96,
+        "adv_class": "wheelchair",
+        "count": 21
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 15
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 13
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 9
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 9
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 7
+      },
+      {
+        "true_label": 43,
+        "true_class": "garfield",
+        "adv_label": 83,
+        "adv_class": "snoopy",
+        "count": 6
+      }
+    ]
+  },
+  "overlap_fgsm_eps0.005": {
+    "VGG19_vs_ResNet50": {
+      "jaccard": 0.2903,
+      "shared_pairs": 9,
+      "union": 31,
+      "shared_pair_list": [
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 27,
+          "adv": 59
+        },
+        {
+          "true": 28,
+          "adv": 29
+        },
+        {
+          "true": 51,
+          "adv": 41
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    },
+    "VGG19_vs_DenseNet121": {
+      "jaccard": 0.3793,
+      "shared_pairs": 11,
+      "union": 29,
+      "shared_pair_list": [
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 5,
+          "adv": 40
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 27,
+          "adv": 59
+        },
+        {
+          "true": 28,
+          "adv": 29
+        },
+        {
+          "true": 46,
+          "adv": 22
+        },
+        {
+          "true": 51,
+          "adv": 41
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    },
+    "ResNet50_vs_DenseNet121": {
+      "jaccard": 0.4286,
+      "shared_pairs": 12,
+      "union": 28,
+      "shared_pair_list": [
+        {
+          "true": 0,
+          "adv": 1
+        },
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 2,
+          "adv": 97
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 27,
+          "adv": 59
+        },
+        {
+          "true": 28,
+          "adv": 29
+        },
+        {
+          "true": 50,
+          "adv": 5
+        },
+        {
+          "true": 51,
+          "adv": 41
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    }
+  },
+  "VGG19_fgsm_eps0.01": {
+    "sss": 0.366427,
+    "total_misclassified": 551,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 11
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 10
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 9
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 7
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 7
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 87,
+        "adv_class": "stegosaurus",
+        "count": 6
+      },
+      {
+        "true_label": 46,
+        "true_class": "grand_piano",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 5
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 5
+      },
+      {
+        "true_label": 76,
+        "true_class": "rhino",
+        "adv_label": 36,
+        "adv_class": "elephant",
+        "count": 5
+      },
+      {
+        "true_label": 81,
+        "true_class": "scorpion",
+        "adv_label": 27,
+        "adv_class": "crayfish",
+        "count": 5
+      }
+    ]
+  },
+  "ResNet50_fgsm_eps0.01": {
+    "sss": 0.387461,
+    "total_misclassified": 420,
+    "top_pairs": [
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 7
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 7
+      },
+      {
+        "true_label": 51,
+        "true_class": "ibis",
+        "adv_label": 41,
+        "adv_class": "flamingo",
+        "count": 6
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 5
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 5
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 4
+      },
+      {
+        "true_label": 28,
+        "true_class": "crocodile",
+        "adv_label": 29,
+        "adv_class": "crocodile_head",
+        "count": 4
+      },
+      {
+        "true_label": 81,
+        "true_class": "scorpion",
+        "adv_label": 27,
+        "adv_class": "crayfish",
+        "count": 4
+      }
+    ]
+  },
+  "DenseNet121_fgsm_eps0.01": {
+    "sss": 0.407661,
+    "total_misclassified": 683,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 43
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 27
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 96,
+        "adv_class": "wheelchair",
+        "count": 26
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 14
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 12
+      },
+      {
+        "true_label": 2,
+        "true_class": "Leopards",
+        "adv_label": 97,
+        "adv_class": "wild_cat",
+        "count": 10
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 9
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 43,
+        "true_class": "garfield",
+        "adv_label": 83,
+        "adv_class": "snoopy",
+        "count": 7
+      }
+    ]
+  },
+  "overlap_fgsm_eps0.01": {
+    "VGG19_vs_ResNet50": {
+      "jaccard": 0.2903,
+      "shared_pairs": 9,
+      "union": 31,
+      "shared_pair_list": [
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 3,
+          "adv": 5
+        },
+        {
+          "true": 5,
+          "adv": 22
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 51,
+          "adv": 41
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    },
+    "VGG19_vs_DenseNet121": {
+      "jaccard": 0.25,
+      "shared_pairs": 8,
+      "union": 32,
+      "shared_pair_list": [
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 5,
+          "adv": 40
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 46,
+          "adv": 22
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    },
+    "ResNet50_vs_DenseNet121": {
+      "jaccard": 0.3333,
+      "shared_pairs": 10,
+      "union": 30,
+      "shared_pair_list": [
+        {
+          "true": 0,
+          "adv": 1
+        },
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 2,
+          "adv": 97
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 50,
+          "adv": 5
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 26
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    }
+  },
+  "VGG19_fgsm_eps0.02": {
+    "sss": 0.346814,
+    "total_misclassified": 668,
+    "top_pairs": [
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 9
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 9
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 9
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 8
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 87,
+        "adv_class": "stegosaurus",
+        "count": 6
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 6,
+        "adv_class": "anchor",
+        "count": 6
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 5
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 23,
+        "adv_class": "chandelier",
+        "count": 5
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 5
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 5
+      }
+    ]
+  },
+  "ResNet50_fgsm_eps0.02": {
+    "sss": 0.381463,
+    "total_misclassified": 464,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 11
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 9
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 8
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 8
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 6
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 6
+      },
+      {
+        "true_label": 51,
+        "true_class": "ibis",
+        "adv_label": 41,
+        "adv_class": "flamingo",
+        "count": 6
+      },
+      {
+        "true_label": 2,
+        "true_class": "Leopards",
+        "adv_label": 97,
+        "adv_class": "wild_cat",
+        "count": 4
+      },
+      {
+        "true_label": 28,
+        "true_class": "crocodile",
+        "adv_label": 29,
+        "adv_class": "crocodile_head",
+        "count": 4
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 4
+      }
+    ]
+  },
+  "DenseNet121_fgsm_eps0.02": {
+    "sss": 0.395853,
+    "total_misclassified": 722,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 43
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 26
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 96,
+        "adv_class": "wheelchair",
+        "count": 25
+      },
+      {
+        "true_label": 2,
+        "true_class": "Leopards",
+        "adv_label": 97,
+        "adv_class": "wild_cat",
+        "count": 13
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 13
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 11
+      },
+      {
+        "true_label": 46,
+        "true_class": "grand_piano",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 9
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 8
+      },
+      {
+        "true_label": 43,
+        "true_class": "garfield",
+        "adv_label": 83,
+        "adv_class": "snoopy",
+        "count": 8
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 8
+      }
+    ]
+  },
+  "overlap_fgsm_eps0.02": {
+    "VGG19_vs_ResNet50": {
+      "jaccard": 0.2121,
+      "shared_pairs": 7,
+      "union": 33,
+      "shared_pair_list": [
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 5,
+          "adv": 22
+        },
+        {
+          "true": 19,
+          "adv": 5
+        },
+        {
+          "true": 51,
+          "adv": 41
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    },
+    "VGG19_vs_DenseNet121": {
+      "jaccard": 0.1765,
+      "shared_pairs": 6,
+      "union": 34,
+      "shared_pair_list": [
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 5,
+          "adv": 40
+        },
+        {
+          "true": 46,
+          "adv": 22
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    },
+    "ResNet50_vs_DenseNet121": {
+      "jaccard": 0.3793,
+      "shared_pairs": 11,
+      "union": 29,
+      "shared_pair_list": [
+        {
+          "true": 0,
+          "adv": 1
+        },
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 2,
+          "adv": 97
+        },
+        {
+          "true": 3,
+          "adv": 18
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 50,
+          "adv": 5
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 26
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    }
+  },
+  "VGG19_fgsm_eps0.04": {
+    "sss": 0.342688,
+    "total_misclassified": 712,
+    "top_pairs": [
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 11
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 9
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 6,
+        "adv_class": "anchor",
+        "count": 8
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 26,
+        "adv_class": "crab",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 23,
+        "adv_class": "chandelier",
+        "count": 7
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 87,
+        "adv_class": "stegosaurus",
+        "count": 7
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 7
+      },
+      {
+        "true_label": 46,
+        "true_class": "grand_piano",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 6
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 39,
+        "adv_class": "ewer",
+        "count": 5
+      }
+    ]
+  },
+  "ResNet50_fgsm_eps0.04": {
+    "sss": 0.381141,
+    "total_misclassified": 468,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 7
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 7
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 7
+      },
+      {
+        "true_label": 51,
+        "true_class": "ibis",
+        "adv_label": 41,
+        "adv_class": "flamingo",
+        "count": 6
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 67,
+        "adv_class": "octopus",
+        "count": 5
+      },
+      {
+        "true_label": 94,
+        "true_class": "watch",
+        "adv_label": 18,
+        "adv_class": "cannon",
+        "count": 5
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 4
+      },
+      {
+        "true_label": 2,
+        "true_class": "Leopards",
+        "adv_label": 97,
+        "adv_class": "wild_cat",
+        "count": 4
+      }
+    ]
+  },
+  "DenseNet121_fgsm_eps0.04": {
+    "sss": 0.388313,
+    "total_misclassified": 707,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 43
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 96,
+        "adv_class": "wheelchair",
+        "count": 22
+      },
+      {
+        "true_label": 2,
+        "true_class": "Leopards",
+        "adv_label": 97,
+        "adv_class": "wild_cat",
+        "count": 16
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 15
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 14
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 10
+      },
+      {
+        "true_label": 43,
+        "true_class": "garfield",
+        "adv_label": 83,
+        "adv_class": "snoopy",
+        "count": 8
+      },
+      {
+        "true_label": 46,
+        "true_class": "grand_piano",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 52,
+        "adv_class": "inline_skate",
+        "count": 6
+      }
+    ]
+  },
+  "overlap_fgsm_eps0.04": {
+    "VGG19_vs_ResNet50": {
+      "jaccard": 0.0811,
+      "shared_pairs": 3,
+      "union": 37,
+      "shared_pair_list": [
+        {
+          "true": 3,
+          "adv": 5
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    },
+    "VGG19_vs_DenseNet121": {
+      "jaccard": 0.0811,
+      "shared_pairs": 3,
+      "union": 37,
+      "shared_pair_list": [
+        {
+          "true": 46,
+          "adv": 22
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    },
+    "ResNet50_vs_DenseNet121": {
+      "jaccard": 0.3333,
+      "shared_pairs": 10,
+      "union": 30,
+      "shared_pair_list": [
+        {
+          "true": 0,
+          "adv": 1
+        },
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 2,
+          "adv": 97
+        },
+        {
+          "true": 3,
+          "adv": 18
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 50,
+          "adv": 5
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    }
+  },
+  "VGG19_pgd_eps0.005": {
+    "sss": 0.357565,
+    "total_misclassified": 647,
+    "top_pairs": [
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 13
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 12
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 9
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 7
+      },
+      {
+        "true_label": 81,
+        "true_class": "scorpion",
+        "adv_label": 27,
+        "adv_class": "crayfish",
+        "count": 7
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 6
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 56,
+        "adv_class": "lamp",
+        "count": 6
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 6
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 37,
+        "adv_class": "emu",
+        "count": 5
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 39,
+        "adv_class": "ewer",
+        "count": 5
+      }
+    ]
+  },
+  "ResNet50_pgd_eps0.005": {
+    "sss": 0.369614,
+    "total_misclassified": 721,
+    "top_pairs": [
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 21
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 20
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 12
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 11
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 90,
+        "true_class": "sunflower",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 8
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 42,
+        "adv_class": "flamingo_head",
+        "count": 6
+      },
+      {
+        "true_label": 51,
+        "true_class": "ibis",
+        "adv_label": 41,
+        "adv_class": "flamingo",
+        "count": 6
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 6
+      }
+    ]
+  },
+  "DenseNet121_pgd_eps0.005": {
+    "sss": 0.381675,
+    "total_misclassified": 866,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 43
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 96,
+        "adv_class": "wheelchair",
+        "count": 32
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 27
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 17
+      },
+      {
+        "true_label": 2,
+        "true_class": "Leopards",
+        "adv_label": 97,
+        "adv_class": "wild_cat",
+        "count": 14
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 11
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 10
+      },
+      {
+        "true_label": 46,
+        "true_class": "grand_piano",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 10
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 9
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 8
+      }
+    ]
+  },
+  "overlap_pgd_eps0.005": {
+    "VGG19_vs_ResNet50": {
+      "jaccard": 0.25,
+      "shared_pairs": 8,
+      "union": 32,
+      "shared_pair_list": [
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 5,
+          "adv": 26
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 50,
+          "adv": 5
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    },
+    "VGG19_vs_DenseNet121": {
+      "jaccard": 0.25,
+      "shared_pairs": 8,
+      "union": 32,
+      "shared_pair_list": [
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 5,
+          "adv": 40
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 46,
+          "adv": 22
+        },
+        {
+          "true": 50,
+          "adv": 5
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    },
+    "ResNet50_vs_DenseNet121": {
+      "jaccard": 0.3333,
+      "shared_pairs": 10,
+      "union": 30,
+      "shared_pair_list": [
+        {
+          "true": 0,
+          "adv": 1
+        },
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 3,
+          "adv": 18
+        },
+        {
+          "true": 3,
+          "adv": 96
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 50,
+          "adv": 5
+        },
+        {
+          "true": 51,
+          "adv": 41
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    }
+  },
+  "VGG19_pgd_eps0.01": {
+    "sss": 0.348016,
+    "total_misclassified": 810,
+    "top_pairs": [
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 20
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 12
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 11
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 87,
+        "adv_class": "stegosaurus",
+        "count": 10
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 9
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 56,
+        "adv_class": "lamp",
+        "count": 8
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 39,
+        "adv_class": "ewer",
+        "count": 7
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 23,
+        "adv_class": "chandelier",
+        "count": 7
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 26,
+        "adv_class": "crab",
+        "count": 7
+      },
+      {
+        "true_label": 81,
+        "true_class": "scorpion",
+        "adv_label": 27,
+        "adv_class": "crayfish",
+        "count": 7
+      }
+    ]
+  },
+  "ResNet50_pgd_eps0.01": {
+    "sss": 0.366235,
+    "total_misclassified": 789,
+    "top_pairs": [
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 20
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 20
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 67,
+        "adv_class": "octopus",
+        "count": 16
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 12
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 11
+      },
+      {
+        "true_label": 90,
+        "true_class": "sunflower",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 9
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 18,
+        "adv_class": "cannon",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 10,
+        "adv_class": "beaver",
+        "count": 7
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 7
+      }
+    ]
+  },
+  "DenseNet121_pgd_eps0.01": {
+    "sss": 0.374734,
+    "total_misclassified": 868,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 43
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 96,
+        "adv_class": "wheelchair",
+        "count": 30
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 27
+      },
+      {
+        "true_label": 2,
+        "true_class": "Leopards",
+        "adv_label": 97,
+        "adv_class": "wild_cat",
+        "count": 14
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 14
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 11
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 10
+      },
+      {
+        "true_label": 46,
+        "true_class": "grand_piano",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 8
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 8
+      },
+      {
+        "true_label": 60,
+        "true_class": "lotus",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 8
+      }
+    ]
+  },
+  "overlap_pgd_eps0.01": {
+    "VGG19_vs_ResNet50": {
+      "jaccard": 0.1765,
+      "shared_pairs": 6,
+      "union": 34,
+      "shared_pair_list": [
+        {
+          "true": 5,
+          "adv": 26
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    },
+    "VGG19_vs_DenseNet121": {
+      "jaccard": 0.1765,
+      "shared_pairs": 6,
+      "union": 34,
+      "shared_pair_list": [
+        {
+          "true": 5,
+          "adv": 40
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 46,
+          "adv": 22
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    },
+    "ResNet50_vs_DenseNet121": {
+      "jaccard": 0.3793,
+      "shared_pairs": 11,
+      "union": 29,
+      "shared_pair_list": [
+        {
+          "true": 0,
+          "adv": 1
+        },
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 2,
+          "adv": 97
+        },
+        {
+          "true": 3,
+          "adv": 18
+        },
+        {
+          "true": 3,
+          "adv": 96
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 50,
+          "adv": 5
+        },
+        {
+          "true": 51,
+          "adv": 41
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    }
+  },
+  "VGG19_pgd_eps0.02": {
+    "sss": 0.345832,
+    "total_misclassified": 841,
+    "top_pairs": [
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 20
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 13
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 12
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 23,
+        "adv_class": "chandelier",
+        "count": 9
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 87,
+        "adv_class": "stegosaurus",
+        "count": 9
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 9
+      },
+      {
+        "true_label": 81,
+        "true_class": "scorpion",
+        "adv_label": 27,
+        "adv_class": "crayfish",
+        "count": 9
+      },
+      {
+        "true_label": 19,
+        "true_class": "car_side",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 8
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 39,
+        "adv_class": "ewer",
+        "count": 7
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 6
+      }
+    ]
+  },
+  "ResNet50_pgd_eps0.02": {
+    "sss": 0.360679,
+    "total_misclassified": 811,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 24
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 18
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 67,
+        "adv_class": "octopus",
+        "count": 18
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 12
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 10
+      },
+      {
+        "true_label": 90,
+        "true_class": "sunflower",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 9
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 94,
+        "adv_class": "watch",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 7
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 10,
+        "adv_class": "beaver",
+        "count": 6
+      }
+    ]
+  },
+  "DenseNet121_pgd_eps0.02": {
+    "sss": 0.367943,
+    "total_misclassified": 869,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 42
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 28
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 96,
+        "adv_class": "wheelchair",
+        "count": 24
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 13
+      },
+      {
+        "true_label": 2,
+        "true_class": "Leopards",
+        "adv_label": 97,
+        "adv_class": "wild_cat",
+        "count": 12
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 12
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 9
+      },
+      {
+        "true_label": 46,
+        "true_class": "grand_piano",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 8
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      }
+    ]
+  },
+  "overlap_pgd_eps0.02": {
+    "VGG19_vs_ResNet50": {
+      "jaccard": 0.1111,
+      "shared_pairs": 4,
+      "union": 36,
+      "shared_pair_list": [
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    },
+    "VGG19_vs_DenseNet121": {
+      "jaccard": 0.25,
+      "shared_pairs": 8,
+      "union": 32,
+      "shared_pair_list": [
+        {
+          "true": 3,
+          "adv": 50
+        },
+        {
+          "true": 5,
+          "adv": 40
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 46,
+          "adv": 22
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        },
+        {
+          "true": 81,
+          "adv": 27
+        }
+      ]
+    },
+    "ResNet50_vs_DenseNet121": {
+      "jaccard": 0.3333,
+      "shared_pairs": 10,
+      "union": 30,
+      "shared_pair_list": [
+        {
+          "true": 0,
+          "adv": 1
+        },
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 2,
+          "adv": 97
+        },
+        {
+          "true": 3,
+          "adv": 18
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 43,
+          "adv": 83
+        },
+        {
+          "true": 50,
+          "adv": 5
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 60,
+          "adv": 95
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    }
+  },
+  "VGG19_pgd_eps0.04": {
+    "sss": 0.339602,
+    "total_misclassified": 849,
+    "top_pairs": [
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 16
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 12
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 9
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 9
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 87,
+        "adv_class": "stegosaurus",
+        "count": 8
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 6,
+        "adv_class": "anchor",
+        "count": 8
+      },
+      {
+        "true_label": 81,
+        "true_class": "scorpion",
+        "adv_label": 27,
+        "adv_class": "crayfish",
+        "count": 8
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 7
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 23,
+        "adv_class": "chandelier",
+        "count": 7
+      },
+      {
+        "true_label": 19,
+        "true_class": "car_side",
+        "adv_label": 40,
+        "adv_class": "ferry",
+        "count": 7
+      }
+    ]
+  },
+  "ResNet50_pgd_eps0.04": {
+    "sss": 0.360716,
+    "total_misclassified": 829,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 26
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 67,
+        "adv_class": "octopus",
+        "count": 25
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 18
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 10
+      },
+      {
+        "true_label": 90,
+        "true_class": "sunflower",
+        "adv_label": 95,
+        "adv_class": "water_lilly",
+        "count": 10
+      },
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 10,
+        "adv_class": "beaver",
+        "count": 8
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 26,
+        "adv_class": "crab",
+        "count": 8
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 8
+      },
+      {
+        "true_label": 79,
+        "true_class": "schooner",
+        "adv_label": 55,
+        "adv_class": "ketch",
+        "count": 8
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 16,
+        "adv_class": "butterfly",
+        "count": 6
+      }
+    ]
+  },
+  "DenseNet121_pgd_eps0.04": {
+    "sss": 0.35747,
+    "total_misclassified": 869,
+    "top_pairs": [
+      {
+        "true_label": 1,
+        "true_class": "Faces_easy",
+        "adv_label": 0,
+        "adv_class": "Faces",
+        "count": 40
+      },
+      {
+        "true_label": 0,
+        "true_class": "Faces",
+        "adv_label": 1,
+        "adv_class": "Faces_easy",
+        "count": 26
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 96,
+        "adv_class": "wheelchair",
+        "count": 19
+      },
+      {
+        "true_label": 2,
+        "true_class": "Leopards",
+        "adv_label": 97,
+        "adv_class": "wild_cat",
+        "count": 13
+      },
+      {
+        "true_label": 5,
+        "true_class": "airplanes",
+        "adv_label": 50,
+        "adv_class": "helicopter",
+        "count": 12
+      },
+      {
+        "true_label": 55,
+        "true_class": "ketch",
+        "adv_label": 79,
+        "adv_class": "schooner",
+        "count": 11
+      },
+      {
+        "true_label": 3,
+        "true_class": "Motorbikes",
+        "adv_label": 16,
+        "adv_class": "butterfly",
+        "count": 10
+      },
+      {
+        "true_label": 50,
+        "true_class": "helicopter",
+        "adv_label": 5,
+        "adv_class": "airplanes",
+        "count": 9
+      },
+      {
+        "true_label": 43,
+        "true_class": "garfield",
+        "adv_label": 83,
+        "adv_class": "snoopy",
+        "count": 8
+      },
+      {
+        "true_label": 46,
+        "true_class": "grand_piano",
+        "adv_label": 22,
+        "adv_class": "chair",
+        "count": 8
+      }
+    ]
+  },
+  "overlap_pgd_eps0.04": {
+    "VGG19_vs_ResNet50": {
+      "jaccard": 0.0526,
+      "shared_pairs": 2,
+      "union": 38,
+      "shared_pair_list": [
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    },
+    "VGG19_vs_DenseNet121": {
+      "jaccard": 0.0811,
+      "shared_pairs": 3,
+      "union": 37,
+      "shared_pair_list": [
+        {
+          "true": 46,
+          "adv": 22
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    },
+    "ResNet50_vs_DenseNet121": {
+      "jaccard": 0.3333,
+      "shared_pairs": 10,
+      "union": 30,
+      "shared_pair_list": [
+        {
+          "true": 0,
+          "adv": 1
+        },
+        {
+          "true": 1,
+          "adv": 0
+        },
+        {
+          "true": 2,
+          "adv": 97
+        },
+        {
+          "true": 3,
+          "adv": 16
+        },
+        {
+          "true": 3,
+          "adv": 96
+        },
+        {
+          "true": 5,
+          "adv": 50
+        },
+        {
+          "true": 43,
+          "adv": 83
+        },
+        {
+          "true": 50,
+          "adv": 5
+        },
+        {
+          "true": 55,
+          "adv": 79
+        },
+        {
+          "true": 79,
+          "adv": 55
+        }
+      ]
+    }
+  }
+}
