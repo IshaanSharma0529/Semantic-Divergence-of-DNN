@@ -1,0 +1,4 @@
+Model,Clean Acc (%),Semantic FR (%),Latent Interp FR (%),Style Transfer FR (%),Proto Shift FR (%),Diffusion FR (%),Texture Sensitivity,Min Lambda Flip
+VGG19,93.0,37.0,7.0,0.0,81.0,60.0,0.0,0.501
+ResNet50,95.5,30.2,4.0,0.0,77.0,40.0,0.0,0.535
+DenseNet121,95.6,36.2,11.0,1.0,76.0,57.0,1.0,0.534
