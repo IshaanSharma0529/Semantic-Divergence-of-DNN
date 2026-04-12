@@ -1,0 +1,108 @@
+{
+  "model": "SwinBase",
+  "dataset": "ImageNet-100",
+  "fgsm": {
+    "0.005": {
+      "epsilon": 0.005,
+      "clean_accuracy": 0.903,
+      "adv_accuracy": 0.745,
+      "accuracy_drop": 0.15800000000000003,
+      "fooling_rate": 0.165,
+      "mean_clean_conf": 0.9297894748672842,
+      "mean_adv_conf": 0.8731618841178715,
+      "total_samples": 1000
+    },
+    "0.01": {
+      "epsilon": 0.01,
+      "clean_accuracy": 0.903,
+      "adv_accuracy": 0.659,
+      "accuracy_drop": 0.244,
+      "fooling_rate": 0.253,
+      "mean_clean_conf": 0.9297894748672842,
+      "mean_adv_conf": 0.854854074075818,
+      "total_samples": 1000
+    },
+    "0.02": {
+      "epsilon": 0.02,
+      "clean_accuracy": 0.903,
+      "adv_accuracy": 0.579,
+      "accuracy_drop": 0.32400000000000007,
+      "fooling_rate": 0.333,
+      "mean_clean_conf": 0.9297894748672842,
+      "mean_adv_conf": 0.8423589206635952,
+      "total_samples": 1000
+    },
+    "0.04": {
+      "epsilon": 0.04,
+      "clean_accuracy": 0.903,
+      "adv_accuracy": 0.522,
+      "accuracy_drop": 0.381,
+      "fooling_rate": 0.394,
+      "mean_clean_conf": 0.9297894748672842,
+      "mean_adv_conf": 0.826179156973958,
+      "total_samples": 1000
+    }
+  },
+  "pgd": {
+    "0.005": {
+      "epsilon": 0.005,
+      "clean_accuracy": 0.903,
+      "adv_accuracy": 0.443,
+      "accuracy_drop": 0.46,
+      "fooling_rate": 0.468,
+      "mean_clean_conf": 0.9297894748672842,
+      "mean_adv_conf": 0.8336888556443155,
+      "total_samples": 1000
+    },
+    "0.01": {
+      "epsilon": 0.01,
+      "clean_accuracy": 0.903,
+      "adv_accuracy": 0.222,
+      "accuracy_drop": 0.681,
+      "fooling_rate": 0.694,
+      "mean_clean_conf": 0.9297894748672842,
+      "mean_adv_conf": 0.8653251563161611,
+      "total_samples": 1000
+    },
+    "0.02": {
+      "epsilon": 0.02,
+      "clean_accuracy": 0.903,
+      "adv_accuracy": 0.091,
+      "accuracy_drop": 0.812,
+      "fooling_rate": 0.83,
+      "mean_clean_conf": 0.9297894748672842,
+      "mean_adv_conf": 0.892985306005925,
+      "total_samples": 1000
+    },
+    "0.04": {
+      "epsilon": 0.04,
+      "clean_accuracy": 0.903,
+      "adv_accuracy": 0.022,
+      "accuracy_drop": 0.881,
+      "fooling_rate": 0.906,
+      "mean_clean_conf": 0.9297894748672842,
+      "mean_adv_conf": 0.9283447706922888,
+      "total_samples": 1000
+    }
+  },
+  "deepfool": {
+    "num_samples": 200,
+    "clean_accuracy": 0.925,
+    "adv_accuracy": 0.095,
+    "fooling_rate": 0.83,
+    "mean_l2_distance": 1.2063722809031605,
+    "median_l2_distance": 0.8788070380687714,
+    "std_l2_distance": 1.1618280962286882
+  },
+  "sss": {
+    "SwinBase_fgsm_eps0.005": 0.471505,
+    "SwinBase_fgsm_eps0.01": 0.450229,
+    "SwinBase_fgsm_eps0.02": 0.436863,
+    "SwinBase_fgsm_eps0.04": 0.425809,
+    "SwinBase_pgd_eps0.005": 0.40402,
+    "SwinBase_pgd_eps0.01": 0.369406,
+    "SwinBase_pgd_eps0.02": 0.352543,
+    "SwinBase_pgd_eps0.04": 0.333591
+  },
+  "timestamp": "2026-04-12T18:32:21.295967"
+}

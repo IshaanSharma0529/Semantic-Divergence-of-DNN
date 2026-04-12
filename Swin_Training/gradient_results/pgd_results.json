@@ -1,0 +1,42 @@
+{
+  "0.005": {
+    "epsilon": 0.005,
+    "clean_accuracy": 0.903,
+    "adv_accuracy": 0.443,
+    "accuracy_drop": 0.46,
+    "fooling_rate": 0.468,
+    "mean_clean_conf": 0.9297894748672842,
+    "mean_adv_conf": 0.8336888556443155,
+    "total_samples": 1000
+  },
+  "0.01": {
+    "epsilon": 0.01,
+    "clean_accuracy": 0.903,
+    "adv_accuracy": 0.222,
+    "accuracy_drop": 0.681,
+    "fooling_rate": 0.694,
+    "mean_clean_conf": 0.9297894748672842,
+    "mean_adv_conf": 0.8653251563161611,
+    "total_samples": 1000
+  },
+  "0.02": {
+    "epsilon": 0.02,
+    "clean_accuracy": 0.903,
+    "adv_accuracy": 0.091,
+    "accuracy_drop": 0.812,
+    "fooling_rate": 0.83,
+    "mean_clean_conf": 0.9297894748672842,
+    "mean_adv_conf": 0.892985306005925,
+    "total_samples": 1000
+  },
+  "0.04": {
+    "epsilon": 0.04,
+    "clean_accuracy": 0.903,
+    "adv_accuracy": 0.022,
+    "accuracy_drop": 0.881,
+    "fooling_rate": 0.906,
+    "mean_clean_conf": 0.9297894748672842,
+    "mean_adv_conf": 0.9283447706922888,
+    "total_samples": 1000
+  }
+}

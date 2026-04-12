@@ -1,0 +1,1138 @@
+{
+  "SwinBase_fgsm_eps0.005": [
+    {
+      "true_class": "sidewinder, horned rattlesnake, Crotalus cerastes",
+      "adv_class": "horned viper, cerastes, sand viper, horned asp, Cerastes cornutus",
+      "true_label": 45,
+      "adv_label": 43,
+      "count": 9
+    },
+    {
+      "true_class": "mud turtle",
+      "adv_class": "terrapin",
+      "true_label": 24,
+      "adv_label": 25,
+      "count": 7
+    },
+    {
+      "true_class": "wolf spider, hunting spider",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 53,
+      "adv_label": 49,
+      "count": 6
+    },
+    {
+      "true_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "adv_class": "tiger shark, Galeocerdo cuvieri",
+      "true_label": 2,
+      "adv_label": 3,
+      "count": 5
+    },
+    {
+      "true_class": "common newt, Triturus vulgaris",
+      "adv_class": "spotted salamander, Ambystoma maculatum",
+      "true_label": 18,
+      "adv_label": 19,
+      "count": 5
+    },
+    {
+      "true_class": "terrapin",
+      "adv_class": "mud turtle",
+      "true_label": 25,
+      "adv_label": 24,
+      "count": 5
+    },
+    {
+      "true_class": "green snake, grass snake",
+      "adv_class": "green mamba",
+      "true_label": 35,
+      "adv_label": 41,
+      "count": 5
+    },
+    {
+      "true_class": "horned viper, cerastes, sand viper, horned asp, Cerastes cornutus",
+      "adv_class": "sidewinder, horned rattlesnake, Crotalus cerastes",
+      "true_label": 43,
+      "adv_label": 45,
+      "count": 5
+    },
+    {
+      "true_class": "tiger shark, Galeocerdo cuvieri",
+      "adv_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "true_label": 3,
+      "adv_label": 2,
+      "count": 4
+    },
+    {
+      "true_class": "hammerhead, hammerhead shark",
+      "adv_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "true_label": 4,
+      "adv_label": 2,
+      "count": 4
+    },
+    {
+      "true_class": "hammerhead, hammerhead shark",
+      "adv_class": "tiger shark, Galeocerdo cuvieri",
+      "true_label": 4,
+      "adv_label": 3,
+      "count": 4
+    },
+    {
+      "true_class": "barn spider, Araneus cavaticus",
+      "adv_class": "garden spider, Aranea diademata",
+      "true_label": 49,
+      "adv_label": 50,
+      "count": 4
+    },
+    {
+      "true_class": "flatworm, platyhelminth",
+      "adv_class": "sea slug, nudibranch",
+      "true_label": 74,
+      "adv_label": 78,
+      "count": 4
+    },
+    {
+      "true_class": "sea slug, nudibranch",
+      "adv_class": "flatworm, platyhelminth",
+      "true_label": 78,
+      "adv_label": 74,
+      "count": 4
+    },
+    {
+      "true_class": "spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish",
+      "adv_class": "crayfish, crawfish, crawdad, crawdaddy",
+      "true_label": 83,
+      "adv_label": 84,
+      "count": 4
+    },
+    {
+      "true_class": "stingray",
+      "adv_class": "electric ray, crampfish, numbfish, torpedo",
+      "true_label": 6,
+      "adv_label": 5,
+      "count": 3
+    },
+    {
+      "true_class": "hen",
+      "adv_class": "cock",
+      "true_label": 8,
+      "adv_label": 7,
+      "count": 3
+    },
+    {
+      "true_class": "common iguana, iguana, Iguana iguana",
+      "adv_class": "green lizard, Lacerta viridis",
+      "true_label": 27,
+      "adv_label": 30,
+      "count": 3
+    },
+    {
+      "true_class": "green mamba",
+      "adv_class": "green snake, grass snake",
+      "true_label": 41,
+      "adv_label": 35,
+      "count": 3
+    },
+    {
+      "true_class": "barn spider, Araneus cavaticus",
+      "adv_class": "wolf spider, hunting spider",
+      "true_label": 49,
+      "adv_label": 53,
+      "count": 3
+    }
+  ],
+  "SwinBase_fgsm_eps0.01": [
+    {
+      "true_class": "sidewinder, horned rattlesnake, Crotalus cerastes",
+      "adv_class": "horned viper, cerastes, sand viper, horned asp, Cerastes cornutus",
+      "true_label": 45,
+      "adv_label": 43,
+      "count": 8
+    },
+    {
+      "true_class": "wolf spider, hunting spider",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 53,
+      "adv_label": 49,
+      "count": 8
+    },
+    {
+      "true_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "adv_class": "tiger shark, Galeocerdo cuvieri",
+      "true_label": 2,
+      "adv_label": 3,
+      "count": 7
+    },
+    {
+      "true_class": "mud turtle",
+      "adv_class": "terrapin",
+      "true_label": 24,
+      "adv_label": 25,
+      "count": 7
+    },
+    {
+      "true_class": "green snake, grass snake",
+      "adv_class": "green mamba",
+      "true_label": 35,
+      "adv_label": 41,
+      "count": 7
+    },
+    {
+      "true_class": "common newt, Triturus vulgaris",
+      "adv_class": "spotted salamander, Ambystoma maculatum",
+      "true_label": 18,
+      "adv_label": 19,
+      "count": 6
+    },
+    {
+      "true_class": "flatworm, platyhelminth",
+      "adv_class": "sea slug, nudibranch",
+      "true_label": 74,
+      "adv_label": 78,
+      "count": 6
+    },
+    {
+      "true_class": "sea slug, nudibranch",
+      "adv_class": "flatworm, platyhelminth",
+      "true_label": 78,
+      "adv_label": 74,
+      "count": 6
+    },
+    {
+      "true_class": "hen",
+      "adv_class": "cock",
+      "true_label": 8,
+      "adv_label": 7,
+      "count": 5
+    },
+    {
+      "true_class": "kite",
+      "adv_class": "bald eagle, American eagle, Haliaeetus leucocephalus",
+      "true_label": 15,
+      "adv_label": 16,
+      "count": 5
+    },
+    {
+      "true_class": "terrapin",
+      "adv_class": "mud turtle",
+      "true_label": 25,
+      "adv_label": 24,
+      "count": 5
+    },
+    {
+      "true_class": "green mamba",
+      "adv_class": "green snake, grass snake",
+      "true_label": 41,
+      "adv_label": 35,
+      "count": 5
+    },
+    {
+      "true_class": "horned viper, cerastes, sand viper, horned asp, Cerastes cornutus",
+      "adv_class": "sidewinder, horned rattlesnake, Crotalus cerastes",
+      "true_label": 43,
+      "adv_label": 45,
+      "count": 5
+    },
+    {
+      "true_class": "crayfish, crawfish, crawdad, crawdaddy",
+      "adv_class": "spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish",
+      "true_label": 84,
+      "adv_label": 83,
+      "count": 5
+    },
+    {
+      "true_class": "hammerhead, hammerhead shark",
+      "adv_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "true_label": 4,
+      "adv_label": 2,
+      "count": 4
+    },
+    {
+      "true_class": "hammerhead, hammerhead shark",
+      "adv_class": "tiger shark, Galeocerdo cuvieri",
+      "true_label": 4,
+      "adv_label": 3,
+      "count": 4
+    },
+    {
+      "true_class": "barn spider, Araneus cavaticus",
+      "adv_class": "garden spider, Aranea diademata",
+      "true_label": 49,
+      "adv_label": 50,
+      "count": 4
+    },
+    {
+      "true_class": "barn spider, Araneus cavaticus",
+      "adv_class": "wolf spider, hunting spider",
+      "true_label": 49,
+      "adv_label": 53,
+      "count": 4
+    },
+    {
+      "true_class": "black widow, Latrodectus mactans",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 51,
+      "adv_label": 49,
+      "count": 4
+    },
+    {
+      "true_class": "Dungeness crab, Cancer magister",
+      "adv_class": "rock crab, Cancer irroratus",
+      "true_label": 81,
+      "adv_label": 82,
+      "count": 4
+    }
+  ],
+  "SwinBase_fgsm_eps0.02": [
+    {
+      "true_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "adv_class": "tiger shark, Galeocerdo cuvieri",
+      "true_label": 2,
+      "adv_label": 3,
+      "count": 8
+    },
+    {
+      "true_class": "green mamba",
+      "adv_class": "green snake, grass snake",
+      "true_label": 41,
+      "adv_label": 35,
+      "count": 8
+    },
+    {
+      "true_class": "sidewinder, horned rattlesnake, Crotalus cerastes",
+      "adv_class": "horned viper, cerastes, sand viper, horned asp, Cerastes cornutus",
+      "true_label": 45,
+      "adv_label": 43,
+      "count": 8
+    },
+    {
+      "true_class": "wolf spider, hunting spider",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 53,
+      "adv_label": 49,
+      "count": 8
+    },
+    {
+      "true_class": "flatworm, platyhelminth",
+      "adv_class": "sea slug, nudibranch",
+      "true_label": 74,
+      "adv_label": 78,
+      "count": 8
+    },
+    {
+      "true_class": "hen",
+      "adv_class": "cock",
+      "true_label": 8,
+      "adv_label": 7,
+      "count": 7
+    },
+    {
+      "true_class": "mud turtle",
+      "adv_class": "terrapin",
+      "true_label": 24,
+      "adv_label": 25,
+      "count": 7
+    },
+    {
+      "true_class": "green snake, grass snake",
+      "adv_class": "green mamba",
+      "true_label": 35,
+      "adv_label": 41,
+      "count": 7
+    },
+    {
+      "true_class": "common newt, Triturus vulgaris",
+      "adv_class": "spotted salamander, Ambystoma maculatum",
+      "true_label": 18,
+      "adv_label": 19,
+      "count": 6
+    },
+    {
+      "true_class": "terrapin",
+      "adv_class": "mud turtle",
+      "true_label": 25,
+      "adv_label": 24,
+      "count": 6
+    },
+    {
+      "true_class": "common iguana, iguana, Iguana iguana",
+      "adv_class": "green lizard, Lacerta viridis",
+      "true_label": 27,
+      "adv_label": 30,
+      "count": 6
+    },
+    {
+      "true_class": "sea slug, nudibranch",
+      "adv_class": "flatworm, platyhelminth",
+      "true_label": 78,
+      "adv_label": 74,
+      "count": 6
+    },
+    {
+      "true_class": "spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish",
+      "adv_class": "crayfish, crawfish, crawdad, crawdaddy",
+      "true_label": 83,
+      "adv_label": 84,
+      "count": 6
+    },
+    {
+      "true_class": "crayfish, crawfish, crawdad, crawdaddy",
+      "adv_class": "spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish",
+      "true_label": 84,
+      "adv_label": 83,
+      "count": 6
+    },
+    {
+      "true_class": "hammerhead, hammerhead shark",
+      "adv_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "true_label": 4,
+      "adv_label": 2,
+      "count": 5
+    },
+    {
+      "true_class": "stingray",
+      "adv_class": "electric ray, crampfish, numbfish, torpedo",
+      "true_label": 6,
+      "adv_label": 5,
+      "count": 5
+    },
+    {
+      "true_class": "kite",
+      "adv_class": "bald eagle, American eagle, Haliaeetus leucocephalus",
+      "true_label": 15,
+      "adv_label": 16,
+      "count": 5
+    },
+    {
+      "true_class": "boa constrictor, Constrictor constrictor",
+      "adv_class": "night snake, Hypsiglena torquata",
+      "true_label": 40,
+      "adv_label": 39,
+      "count": 5
+    },
+    {
+      "true_class": "horned viper, cerastes, sand viper, horned asp, Cerastes cornutus",
+      "adv_class": "sidewinder, horned rattlesnake, Crotalus cerastes",
+      "true_label": 43,
+      "adv_label": 45,
+      "count": 5
+    },
+    {
+      "true_class": "Dungeness crab, Cancer magister",
+      "adv_class": "rock crab, Cancer irroratus",
+      "true_label": 81,
+      "adv_label": 82,
+      "count": 5
+    }
+  ],
+  "SwinBase_fgsm_eps0.04": [
+    {
+      "true_class": "hen",
+      "adv_class": "cock",
+      "true_label": 8,
+      "adv_label": 7,
+      "count": 9
+    },
+    {
+      "true_class": "terrapin",
+      "adv_class": "mud turtle",
+      "true_label": 25,
+      "adv_label": 24,
+      "count": 9
+    },
+    {
+      "true_class": "green mamba",
+      "adv_class": "green snake, grass snake",
+      "true_label": 41,
+      "adv_label": 35,
+      "count": 9
+    },
+    {
+      "true_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "adv_class": "tiger shark, Galeocerdo cuvieri",
+      "true_label": 2,
+      "adv_label": 3,
+      "count": 8
+    },
+    {
+      "true_class": "sidewinder, horned rattlesnake, Crotalus cerastes",
+      "adv_class": "horned viper, cerastes, sand viper, horned asp, Cerastes cornutus",
+      "true_label": 45,
+      "adv_label": 43,
+      "count": 8
+    },
+    {
+      "true_class": "flatworm, platyhelminth",
+      "adv_class": "sea slug, nudibranch",
+      "true_label": 74,
+      "adv_label": 78,
+      "count": 8
+    },
+    {
+      "true_class": "sea slug, nudibranch",
+      "adv_class": "flatworm, platyhelminth",
+      "true_label": 78,
+      "adv_label": 74,
+      "count": 8
+    },
+    {
+      "true_class": "mud turtle",
+      "adv_class": "terrapin",
+      "true_label": 24,
+      "adv_label": 25,
+      "count": 7
+    },
+    {
+      "true_class": "green snake, grass snake",
+      "adv_class": "green mamba",
+      "true_label": 35,
+      "adv_label": 41,
+      "count": 7
+    },
+    {
+      "true_class": "black and gold garden spider, Argiope aurantia",
+      "adv_class": "garden spider, Aranea diademata",
+      "true_label": 48,
+      "adv_label": 50,
+      "count": 7
+    },
+    {
+      "true_class": "Dungeness crab, Cancer magister",
+      "adv_class": "rock crab, Cancer irroratus",
+      "true_label": 81,
+      "adv_label": 82,
+      "count": 7
+    },
+    {
+      "true_class": "common newt, Triturus vulgaris",
+      "adv_class": "spotted salamander, Ambystoma maculatum",
+      "true_label": 18,
+      "adv_label": 19,
+      "count": 6
+    },
+    {
+      "true_class": "common iguana, iguana, Iguana iguana",
+      "adv_class": "green lizard, Lacerta viridis",
+      "true_label": 27,
+      "adv_label": 30,
+      "count": 6
+    },
+    {
+      "true_class": "wolf spider, hunting spider",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 53,
+      "adv_label": 49,
+      "count": 6
+    },
+    {
+      "true_class": "spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish",
+      "adv_class": "crayfish, crawfish, crawdad, crawdaddy",
+      "true_label": 83,
+      "adv_label": 84,
+      "count": 6
+    },
+    {
+      "true_class": "crayfish, crawfish, crawdad, crawdaddy",
+      "adv_class": "spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish",
+      "true_label": 84,
+      "adv_label": 83,
+      "count": 6
+    },
+    {
+      "true_class": "hammerhead, hammerhead shark",
+      "adv_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "true_label": 4,
+      "adv_label": 2,
+      "count": 5
+    },
+    {
+      "true_class": "stingray",
+      "adv_class": "electric ray, crampfish, numbfish, torpedo",
+      "true_label": 6,
+      "adv_label": 5,
+      "count": 5
+    },
+    {
+      "true_class": "kite",
+      "adv_class": "bald eagle, American eagle, Haliaeetus leucocephalus",
+      "true_label": 15,
+      "adv_label": 16,
+      "count": 5
+    },
+    {
+      "true_class": "agama",
+      "adv_class": "whiptail, whiptail lizard",
+      "true_label": 29,
+      "adv_label": 28,
+      "count": 5
+    }
+  ],
+  "SwinBase_pgd_eps0.005": [
+    {
+      "true_class": "mud turtle",
+      "adv_class": "terrapin",
+      "true_label": 24,
+      "adv_label": 25,
+      "count": 10
+    },
+    {
+      "true_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "adv_class": "tiger shark, Galeocerdo cuvieri",
+      "true_label": 2,
+      "adv_label": 3,
+      "count": 8
+    },
+    {
+      "true_class": "hen",
+      "adv_class": "cock",
+      "true_label": 8,
+      "adv_label": 7,
+      "count": 8
+    },
+    {
+      "true_class": "terrapin",
+      "adv_class": "mud turtle",
+      "true_label": 25,
+      "adv_label": 24,
+      "count": 8
+    },
+    {
+      "true_class": "sidewinder, horned rattlesnake, Crotalus cerastes",
+      "adv_class": "horned viper, cerastes, sand viper, horned asp, Cerastes cornutus",
+      "true_label": 45,
+      "adv_label": 43,
+      "count": 8
+    },
+    {
+      "true_class": "green snake, grass snake",
+      "adv_class": "green mamba",
+      "true_label": 35,
+      "adv_label": 41,
+      "count": 7
+    },
+    {
+      "true_class": "green mamba",
+      "adv_class": "green snake, grass snake",
+      "true_label": 41,
+      "adv_label": 35,
+      "count": 7
+    },
+    {
+      "true_class": "wolf spider, hunting spider",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 53,
+      "adv_label": 49,
+      "count": 7
+    },
+    {
+      "true_class": "flatworm, platyhelminth",
+      "adv_class": "sea slug, nudibranch",
+      "true_label": 74,
+      "adv_label": 78,
+      "count": 7
+    },
+    {
+      "true_class": "sea slug, nudibranch",
+      "adv_class": "flatworm, platyhelminth",
+      "true_label": 78,
+      "adv_label": 74,
+      "count": 7
+    },
+    {
+      "true_class": "stingray",
+      "adv_class": "electric ray, crampfish, numbfish, torpedo",
+      "true_label": 6,
+      "adv_label": 5,
+      "count": 6
+    },
+    {
+      "true_class": "common newt, Triturus vulgaris",
+      "adv_class": "spotted salamander, Ambystoma maculatum",
+      "true_label": 18,
+      "adv_label": 19,
+      "count": 6
+    },
+    {
+      "true_class": "black and gold garden spider, Argiope aurantia",
+      "adv_class": "garden spider, Aranea diademata",
+      "true_label": 48,
+      "adv_label": 50,
+      "count": 6
+    },
+    {
+      "true_class": "garden spider, Aranea diademata",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 50,
+      "adv_label": 49,
+      "count": 6
+    },
+    {
+      "true_class": "black widow, Latrodectus mactans",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 51,
+      "adv_label": 49,
+      "count": 6
+    },
+    {
+      "true_class": "tiger shark, Galeocerdo cuvieri",
+      "adv_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "true_label": 3,
+      "adv_label": 2,
+      "count": 5
+    },
+    {
+      "true_class": "hammerhead, hammerhead shark",
+      "adv_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "true_label": 4,
+      "adv_label": 2,
+      "count": 5
+    },
+    {
+      "true_class": "kite",
+      "adv_class": "bald eagle, American eagle, Haliaeetus leucocephalus",
+      "true_label": 15,
+      "adv_label": 16,
+      "count": 5
+    },
+    {
+      "true_class": "leatherback turtle, leatherback, leathery turtle, Dermochelys coriacea",
+      "adv_class": "loggerhead, loggerhead turtle, Caretta caretta",
+      "true_label": 23,
+      "adv_label": 22,
+      "count": 5
+    },
+    {
+      "true_class": "common iguana, iguana, Iguana iguana",
+      "adv_class": "green lizard, Lacerta viridis",
+      "true_label": 27,
+      "adv_label": 30,
+      "count": 5
+    }
+  ],
+  "SwinBase_pgd_eps0.01": [
+    {
+      "true_class": "mud turtle",
+      "adv_class": "terrapin",
+      "true_label": 24,
+      "adv_label": 25,
+      "count": 10
+    },
+    {
+      "true_class": "terrapin",
+      "adv_class": "mud turtle",
+      "true_label": 25,
+      "adv_label": 24,
+      "count": 9
+    },
+    {
+      "true_class": "flatworm, platyhelminth",
+      "adv_class": "sea slug, nudibranch",
+      "true_label": 74,
+      "adv_label": 78,
+      "count": 9
+    },
+    {
+      "true_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "adv_class": "tiger shark, Galeocerdo cuvieri",
+      "true_label": 2,
+      "adv_label": 3,
+      "count": 8
+    },
+    {
+      "true_class": "hen",
+      "adv_class": "cock",
+      "true_label": 8,
+      "adv_label": 7,
+      "count": 8
+    },
+    {
+      "true_class": "green snake, grass snake",
+      "adv_class": "green mamba",
+      "true_label": 35,
+      "adv_label": 41,
+      "count": 8
+    },
+    {
+      "true_class": "hammerhead, hammerhead shark",
+      "adv_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "true_label": 4,
+      "adv_label": 2,
+      "count": 7
+    },
+    {
+      "true_class": "stingray",
+      "adv_class": "electric ray, crampfish, numbfish, torpedo",
+      "true_label": 6,
+      "adv_label": 5,
+      "count": 7
+    },
+    {
+      "true_class": "garden spider, Aranea diademata",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 50,
+      "adv_label": 49,
+      "count": 7
+    },
+    {
+      "true_class": "black widow, Latrodectus mactans",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 51,
+      "adv_label": 49,
+      "count": 7
+    },
+    {
+      "true_class": "sea slug, nudibranch",
+      "adv_class": "flatworm, platyhelminth",
+      "true_label": 78,
+      "adv_label": 74,
+      "count": 7
+    },
+    {
+      "true_class": "Dungeness crab, Cancer magister",
+      "adv_class": "rock crab, Cancer irroratus",
+      "true_label": 81,
+      "adv_label": 82,
+      "count": 7
+    },
+    {
+      "true_class": "common newt, Triturus vulgaris",
+      "adv_class": "spotted salamander, Ambystoma maculatum",
+      "true_label": 18,
+      "adv_label": 19,
+      "count": 6
+    },
+    {
+      "true_class": "common iguana, iguana, Iguana iguana",
+      "adv_class": "green lizard, Lacerta viridis",
+      "true_label": 27,
+      "adv_label": 30,
+      "count": 6
+    },
+    {
+      "true_class": "vine snake",
+      "adv_class": "green snake, grass snake",
+      "true_label": 38,
+      "adv_label": 35,
+      "count": 6
+    },
+    {
+      "true_class": "green mamba",
+      "adv_class": "green snake, grass snake",
+      "true_label": 41,
+      "adv_label": 35,
+      "count": 6
+    },
+    {
+      "true_class": "wolf spider, hunting spider",
+      "adv_class": "barn spider, Araneus cavaticus",
+      "true_label": 53,
+      "adv_label": 49,
+      "count": 6
+    },
+    {
+      "true_class": "hornbill",
+      "adv_class": "toucan",
+      "true_label": 64,
+      "adv_label": 66,
+      "count": 6
+    },
+    {
+      "true_class": "black swan, Cygnus atratus",
+      "adv_class": "goose",
+      "true_label": 69,
+      "adv_label": 68,
+      "count": 6
+    },
+    {
+      "true_class": "wallaby, brush kangaroo",
+      "adv_class": "wombat",
+      "true_label": 70,
+      "adv_label": 71,
+      "count": 6
+    }
+  ],
+  "SwinBase_pgd_eps0.02": [
+    {
+      "true_class": "hen",
+      "adv_class": "cock",
+      "true_label": 8,
+      "adv_label": 7,
+      "count": 9
+    },
+    {
+      "true_class": "terrapin",
+      "adv_class": "mud turtle",
+      "true_label": 25,
+      "adv_label": 24,
+      "count": 9
+    },
+    {
+      "true_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "adv_class": "tiger shark, Galeocerdo cuvieri",
+      "true_label": 2,
+      "adv_label": 3,
+      "count": 8
+    },
+    {
+      "true_class": "green snake, grass snake",
+      "adv_class": "green mamba",
+      "true_label": 35,
+      "adv_label": 41,
+      "count": 8
+    },
+    {
+      "true_class": "wallaby, brush kangaroo",
+      "adv_class": "wombat",
+      "true_label": 70,
+      "adv_label": 71,
+      "count": 8
+    },
+    {
+      "true_class": "flatworm, platyhelminth",
+      "adv_class": "sea slug, nudibranch",
+      "true_label": 74,
+      "adv_label": 78,
+      "count": 8
+    },
+    {
+      "true_class": "sea slug, nudibranch",
+      "adv_class": "flatworm, platyhelminth",
+      "true_label": 78,
+      "adv_label": 74,
+      "count": 8
+    },
+    {
+      "true_class": "stingray",
+      "adv_class": "electric ray, crampfish, numbfish, torpedo",
+      "true_label": 6,
+      "adv_label": 5,
+      "count": 7
+    },
+    {
+      "true_class": "common newt, Triturus vulgaris",
+      "adv_class": "spotted salamander, Ambystoma maculatum",
+      "true_label": 18,
+      "adv_label": 19,
+      "count": 7
+    },
+    {
+      "true_class": "mud turtle",
+      "adv_class": "terrapin",
+      "true_label": 24,
+      "adv_label": 25,
+      "count": 7
+    },
+    {
+      "true_class": "black and gold garden spider, Argiope aurantia",
+      "adv_class": "garden spider, Aranea diademata",
+      "true_label": 48,
+      "adv_label": 50,
+      "count": 7
+    },
+    {
+      "true_class": "hornbill",
+      "adv_class": "toucan",
+      "true_label": 64,
+      "adv_label": 66,
+      "count": 7
+    },
+    {
+      "true_class": "black swan, Cygnus atratus",
+      "adv_class": "goose",
+      "true_label": 69,
+      "adv_label": 68,
+      "count": 7
+    },
+    {
+      "true_class": "Dungeness crab, Cancer magister",
+      "adv_class": "rock crab, Cancer irroratus",
+      "true_label": 81,
+      "adv_label": 82,
+      "count": 7
+    },
+    {
+      "true_class": "hammerhead, hammerhead shark",
+      "adv_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "true_label": 4,
+      "adv_label": 2,
+      "count": 6
+    },
+    {
+      "true_class": "electric ray, crampfish, numbfish, torpedo",
+      "adv_class": "stingray",
+      "true_label": 5,
+      "adv_label": 6,
+      "count": 6
+    },
+    {
+      "true_class": "cock",
+      "adv_class": "hen",
+      "true_label": 7,
+      "adv_label": 8,
+      "count": 6
+    },
+    {
+      "true_class": "kite",
+      "adv_class": "bald eagle, American eagle, Haliaeetus leucocephalus",
+      "true_label": 15,
+      "adv_label": 16,
+      "count": 6
+    },
+    {
+      "true_class": "common iguana, iguana, Iguana iguana",
+      "adv_class": "green lizard, Lacerta viridis",
+      "true_label": 27,
+      "adv_label": 30,
+      "count": 6
+    },
+    {
+      "true_class": "boa constrictor, Constrictor constrictor",
+      "adv_class": "night snake, Hypsiglena torquata",
+      "true_label": 40,
+      "adv_label": 39,
+      "count": 6
+    }
+  ],
+  "SwinBase_pgd_eps0.04": [
+    {
+      "true_class": "hen",
+      "adv_class": "cock",
+      "true_label": 8,
+      "adv_label": 7,
+      "count": 9
+    },
+    {
+      "true_class": "terrapin",
+      "adv_class": "mud turtle",
+      "true_label": 25,
+      "adv_label": 24,
+      "count": 9
+    },
+    {
+      "true_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "adv_class": "tiger shark, Galeocerdo cuvieri",
+      "true_label": 2,
+      "adv_label": 3,
+      "count": 8
+    },
+    {
+      "true_class": "common newt, Triturus vulgaris",
+      "adv_class": "spotted salamander, Ambystoma maculatum",
+      "true_label": 18,
+      "adv_label": 19,
+      "count": 8
+    },
+    {
+      "true_class": "flatworm, platyhelminth",
+      "adv_class": "sea slug, nudibranch",
+      "true_label": 74,
+      "adv_label": 78,
+      "count": 8
+    },
+    {
+      "true_class": "sea slug, nudibranch",
+      "adv_class": "flatworm, platyhelminth",
+      "true_label": 78,
+      "adv_label": 74,
+      "count": 8
+    },
+    {
+      "true_class": "electric ray, crampfish, numbfish, torpedo",
+      "adv_class": "stingray",
+      "true_label": 5,
+      "adv_label": 6,
+      "count": 7
+    },
+    {
+      "true_class": "hornbill",
+      "adv_class": "toucan",
+      "true_label": 64,
+      "adv_label": 66,
+      "count": 7
+    },
+    {
+      "true_class": "black swan, Cygnus atratus",
+      "adv_class": "goose",
+      "true_label": 69,
+      "adv_label": 68,
+      "count": 7
+    },
+    {
+      "true_class": "wallaby, brush kangaroo",
+      "adv_class": "wombat",
+      "true_label": 70,
+      "adv_label": 71,
+      "count": 7
+    },
+    {
+      "true_class": "spoonbill",
+      "adv_class": "flamingo",
+      "true_label": 87,
+      "adv_label": 88,
+      "count": 7
+    },
+    {
+      "true_class": "hammerhead, hammerhead shark",
+      "adv_class": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias",
+      "true_label": 4,
+      "adv_label": 2,
+      "count": 6
+    },
+    {
+      "true_class": "stingray",
+      "adv_class": "electric ray, crampfish, numbfish, torpedo",
+      "true_label": 6,
+      "adv_label": 5,
+      "count": 6
+    },
+    {
+      "true_class": "cock",
+      "adv_class": "hen",
+      "true_label": 7,
+      "adv_label": 8,
+      "count": 6
+    },
+    {
+      "true_class": "mud turtle",
+      "adv_class": "terrapin",
+      "true_label": 24,
+      "adv_label": 25,
+      "count": 6
+    },
+    {
+      "true_class": "common iguana, iguana, Iguana iguana",
+      "adv_class": "green lizard, Lacerta viridis",
+      "true_label": 27,
+      "adv_label": 30,
+      "count": 6
+    },
+    {
+      "true_class": "spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish",
+      "adv_class": "crayfish, crawfish, crawdad, crawdaddy",
+      "true_label": 83,
+      "adv_label": 84,
+      "count": 6
+    },
+    {
+      "true_class": "kite",
+      "adv_class": "bald eagle, American eagle, Haliaeetus leucocephalus",
+      "true_label": 15,
+      "adv_label": 16,
+      "count": 5
+    },
+    {
+      "true_class": "bald eagle, American eagle, Haliaeetus leucocephalus",
+      "adv_class": "kite",
+      "true_label": 16,
+      "adv_label": 15,
+      "count": 5
+    },
+    {
+      "true_class": "banded gecko",
+      "adv_class": "whiptail, whiptail lizard",
+      "true_label": 26,
+      "adv_label": 28,
+      "count": 5
+    }
+  ]
+}

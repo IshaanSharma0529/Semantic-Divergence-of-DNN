@@ -56,12 +56,10 @@ Model Training/attack_models/**/*.onnx
 *.npz
 .cache/
 
-# Logs and outputs
-logs/
+# Logs and outputs (CNN side only — Swin logs tracked separately)
+Model Training/logs/
 *.log
-training_curves.png
-individual_training_curves.png
-model_comparison.png
+!Swin_Training/logs/*.log
 
 # OS files
 .DS_Store
@@ -91,8 +89,14 @@ Model Training/attack_models/
 Model Training/checkpoints/
 Model Training/final_models/
 
-# ViT / Swin outputs (generated at runtime)
-Swin_Training/
+# ViT / Swin — exclude checkpoints and large binaries, keep results/figures/logs
+Swin_Training/checkpoints/
+Swin_Training/clean_baselines/
+Swin_Training/genai_results/.checkpoints/
+Swin_Training/**/*.pt
+Swin_Training/**/*.pth
+Swin_Training/**/*.npy
+Swin_Training/**/*.npz
 ImageNet100_Training/data/
 ImageNet100_Training/adversarial_bank/
 

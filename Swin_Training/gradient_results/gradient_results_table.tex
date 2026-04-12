@@ -1,0 +1,15 @@
+\begin{table}[h]
+\centering
+\caption{Swin-Base adversarial accuracy on ImageNet-100}
+\begin{tabular}{lcccccc}
+\toprule
+$\varepsilon$ & \multicolumn{3}{c}{FGSM} & \multicolumn{3}{c}{PGD} \\
+& Adv Acc & Fool Rate & Adv Conf & Adv Acc & Fool Rate & Adv Conf \\
+\midrule
+0.005 & 0.745 & 0.165 & 0.873 & 0.443 & 0.468 & 0.834 \\
+0.01 & 0.659 & 0.253 & 0.855 & 0.222 & 0.694 & 0.865 \\
+0.02 & 0.579 & 0.333 & 0.842 & 0.091 & 0.830 & 0.893 \\
+0.04 & 0.522 & 0.394 & 0.826 & 0.022 & 0.906 & 0.928 \\
+\bottomrule
+\end{tabular}
+\end{table}

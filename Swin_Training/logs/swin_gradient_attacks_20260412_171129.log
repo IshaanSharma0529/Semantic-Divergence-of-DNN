@@ -1,0 +1,48 @@
+2026-04-12 17:11:29,305  INFO  Log: /mnt/d/Ishaan-Research/Semantic-Divergence-of-DNN/Swin_Training/logs/swin_gradient_attacks_20260412_171129.log
+2026-04-12 17:11:29,422  INFO  Device: cuda  Epsilons: [0.005, 0.01, 0.02, 0.04]
+2026-04-12 17:11:29,932  INFO  HTTP Request: HEAD https://huggingface.co/microsoft/swin-base-patch4-window7-224/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-04-12 17:11:30,212  INFO  HTTP Request: HEAD https://huggingface.co/microsoft/swin-base-patch4-window7-224/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-12 17:11:30,245  INFO  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/swin-base-patch4-window7-224/20d6c26ef6455d36c0a78671d787c5da57513d4b/preprocessor_config.json "HTTP/1.1 200 OK"
+2026-04-12 17:11:30,694  INFO  HTTP Request: HEAD https://huggingface.co/microsoft/swin-base-patch4-window7-224/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-04-12 17:11:30,696  WARNING  Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-12 17:11:30,974  INFO  HTTP Request: HEAD https://huggingface.co/microsoft/swin-base-patch4-window7-224/resolve/main/preprocessor_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-12 17:11:31,006  INFO  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/swin-base-patch4-window7-224/20d6c26ef6455d36c0a78671d787c5da57513d4b/preprocessor_config.json "HTTP/1.1 200 OK"
+2026-04-12 17:11:33,054  INFO  Test samples: 1000  Batches: 63
+2026-04-12 17:11:33,342  INFO  HTTP Request: HEAD https://huggingface.co/microsoft/swin-base-patch4-window7-224/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-12 17:11:33,375  INFO  HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/microsoft/swin-base-patch4-window7-224/20d6c26ef6455d36c0a78671d787c5da57513d4b/config.json "HTTP/1.1 200 OK"
+2026-04-12 17:11:33,706  INFO  HTTP Request: HEAD https://huggingface.co/microsoft/swin-base-patch4-window7-224/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-04-12 17:11:37,062  INFO  Loaded checkpoint: swin_base_imagenet100_best.pt  (val_acc=0.9157)
+2026-04-12 17:11:42,433  INFO  Test clean accuracy: 0.9030
+2026-04-12 17:11:42,434  INFO  Mean confidence    : 0.9298
+2026-04-12 17:11:42,443  INFO  
+[1/3] FGSM Attack
+2026-04-12 17:12:05,592  INFO    FGSM ε=0.005: clean=0.903  adv=0.745  fool=0.165  (23.1s)
+2026-04-12 17:12:25,759  INFO    FGSM ε=0.01: clean=0.903  adv=0.659  fool=0.253  (20.2s)
+2026-04-12 17:12:44,853  INFO    FGSM ε=0.02: clean=0.903  adv=0.579  fool=0.333  (19.1s)
+2026-04-12 17:13:04,622  INFO    FGSM ε=0.04: clean=0.903  adv=0.522  fool=0.394  (19.8s)
+2026-04-12 17:13:04,625  INFO  FGSM results saved.
+2026-04-12 17:13:04,634  INFO  
+[2/3] PGD Attack
+2026-04-12 17:14:59,529  INFO    PGD ε=0.005: clean=0.903  adv=0.443  fool=0.468  (114.9s)
+2026-04-12 17:16:52,705  INFO    PGD ε=0.01: clean=0.903  adv=0.222  fool=0.694  (113.2s)
+2026-04-12 17:18:47,811  INFO    PGD ε=0.02: clean=0.903  adv=0.091  fool=0.830  (115.1s)
+2026-04-12 17:20:42,730  INFO    PGD ε=0.04: clean=0.903  adv=0.022  fool=0.906  (114.9s)
+2026-04-12 17:20:42,734  INFO  PGD results saved.
+2026-04-12 17:20:42,745  INFO  
+[3/3] DeepFool Attack (200 samples)
+2026-04-12 18:23:48,245  INFO    DeepFool: fool=0.830  mean_L2=1.2064
+2026-04-12 18:23:48,437  INFO  Summary table saved.
+2026-04-12 18:23:48,448  INFO  LaTeX table saved.
+2026-04-12 18:23:49,051  INFO  Accuracy vs epsilon plot saved.
+2026-04-12 18:23:50,965  INFO  
+Building confusion matrices and computing SSS...
+2026-04-12 18:24:07,644  INFO    FGSM ε=0.005: SSS=0.4715  top pair: sidewinder, horned rattlesnake, Crotalus cerastes→horned viper, cerastes, sand viper, horned asp, Cerastes cornutus (n=9)  (16.7s)
+2026-04-12 18:24:23,518  INFO    FGSM ε=0.01: SSS=0.4502  top pair: sidewinder, horned rattlesnake, Crotalus cerastes→horned viper, cerastes, sand viper, horned asp, Cerastes cornutus (n=8)  (15.9s)
+2026-04-12 18:24:39,845  INFO    FGSM ε=0.02: SSS=0.4369  top pair: great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias→tiger shark, Galeocerdo cuvieri (n=8)  (16.3s)
+2026-04-12 18:24:55,015  INFO    FGSM ε=0.04: SSS=0.4258  top pair: hen→cock (n=9)  (15.2s)
+2026-04-12 18:26:48,582  INFO    PGD ε=0.005: SSS=0.4040  top pair: mud turtle→terrapin (n=10)  (113.6s)
+2026-04-12 18:28:40,593  INFO    PGD ε=0.01: SSS=0.3694  top pair: mud turtle→terrapin (n=10)  (112.0s)
+2026-04-12 18:30:31,837  INFO    PGD ε=0.02: SSS=0.3525  top pair: hen→cock (n=9)  (111.2s)
+2026-04-12 18:32:20,836  INFO    PGD ε=0.04: SSS=0.3336  top pair: hen→cock (n=9)  (109.0s)
+2026-04-12 18:32:21,277  INFO  SSS analysis complete.
+2026-04-12 18:32:21,297  INFO  Full results saved: /mnt/d/Ishaan-Research/Semantic-Divergence-of-DNN/Swin_Training/gradient_results/gradient_full_results.json

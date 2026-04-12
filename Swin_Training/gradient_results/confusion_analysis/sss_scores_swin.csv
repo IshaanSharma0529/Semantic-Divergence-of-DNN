@@ -1,0 +1,9 @@
+Model,Attack,Epsilon,SSS
+SwinBase,fgsm,0.005,0.471505
+SwinBase,fgsm,0.01,0.450229
+SwinBase,fgsm,0.02,0.436863
+SwinBase,fgsm,0.04,0.425809
+SwinBase,pgd,0.005,0.40402
+SwinBase,pgd,0.01,0.369406
+SwinBase,pgd,0.02,0.352543
+SwinBase,pgd,0.04,0.333591

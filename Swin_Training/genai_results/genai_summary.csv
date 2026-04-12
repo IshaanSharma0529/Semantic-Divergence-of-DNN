@@ -1,0 +1,2 @@
+model,dataset,num_samples,inversion_quality,latent_interp,style_transfer,proto_shift,same_class_control,sss_proto_shift,timestamp
+SwinBase,ImageNet-100,100,"{'mean_cosine_sim': 0.9350150000000002, 'mean_pixel_mse': 0.00386}","{'0.25': 0.09, '0.5': 0.14, '0.75': 0.38, '1.0': 0.63}",{'fooling_rate': 0.5},"{'0.5': 0.1, '1.0': 0.08, '2.0': 0.1}","{'0.5': 0.13, '1.0': 0.08, '2.0': 0.07}",0.764795,2026-04-12T21:54:21.678397

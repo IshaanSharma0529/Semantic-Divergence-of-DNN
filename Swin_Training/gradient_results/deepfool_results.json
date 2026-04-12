@@ -1,0 +1,9 @@
+{
+  "num_samples": 200,
+  "clean_accuracy": 0.925,
+  "adv_accuracy": 0.095,
+  "fooling_rate": 0.83,
+  "mean_l2_distance": 1.2063722809031605,
+  "median_l2_distance": 0.8788070380687714,
+  "std_l2_distance": 1.1618280962286882
+}
