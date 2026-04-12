@@ -1,0 +1,100 @@
+tench, Tinca tinca
+goldfish, Carassius auratus
+great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+tiger shark, Galeocerdo cuvieri
+hammerhead, hammerhead shark
+electric ray, crampfish, numbfish, torpedo
+stingray
+cock
+hen
+goldfinch, Carduelis carduelis
+indigo bunting, indigo finch, indigo bird, Passerina cyanea
+bulbul
+magpie
+chickadee
+water ouzel, dipper
+kite
+bald eagle, American eagle, Haliaeetus leucocephalus
+great grey owl, great gray owl, Strix nebulosa
+common newt, Triturus vulgaris
+spotted salamander, Ambystoma maculatum
+axolotl, mud puppy, Ambystoma mexicanum
+tailed frog, bell toad, ribbed toad, tailed toad, Ascaphus trui
+loggerhead, loggerhead turtle, Caretta caretta
+leatherback turtle, leatherback, leathery turtle, Dermochelys coriacea
+mud turtle
+terrapin
+banded gecko
+common iguana, iguana, Iguana iguana
+whiptail, whiptail lizard
+agama
+green lizard, Lacerta viridis
+Komodo dragon, Komodo lizard, dragon lizard, giant lizard, Varanus komodoensis
+American alligator, Alligator mississipiensis
+thunder snake, worm snake, Carphophis amoenus
+hognose snake, puff adder, sand viper
+green snake, grass snake
+king snake, kingsnake
+garter snake, grass snake
+vine snake
+night snake, Hypsiglena torquata
+boa constrictor, Constrictor constrictor
+green mamba
+sea snake
+horned viper, cerastes, sand viper, horned asp, Cerastes cornutus
+diamondback, diamondback rattlesnake, Crotalus adamanteus
+sidewinder, horned rattlesnake, Crotalus cerastes
+harvestman, daddy longlegs, Phalangium opilio
+scorpion
+black and gold garden spider, Argiope aurantia
+barn spider, Araneus cavaticus
+garden spider, Aranea diademata
+black widow, Latrodectus mactans
+tarantula
+wolf spider, hunting spider
+tick
+black grouse
+ptarmigan
+prairie chicken, prairie grouse, prairie fowl
+peacock
+macaw
+sulphur-crested cockatoo, Kakatoe galerita, Cacatua galerita
+lorikeet
+coucal
+bee eater
+hornbill
+hummingbird
+toucan
+drake
+goose
+black swan, Cygnus atratus
+wallaby, brush kangaroo
+wombat
+jellyfish
+sea anemone, anemone
+flatworm, platyhelminth
+nematode, nematode worm, roundworm
+conch
+snail
+sea slug, nudibranch
+chiton, coat-of-mail shell, sea cradle, polyplacophore
+chambered nautilus, pearly nautilus, nautilus
+Dungeness crab, Cancer magister
+rock crab, Cancer irroratus
+spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish
+crayfish, crawfish, crawdad, crawdaddy
+hermit crab
+white stork, Ciconia ciconia
+spoonbill
+flamingo
+bittern
+crane
+limpkin, Aramus pictus
+American coot, marsh hen, mud hen, water hen, Fulica americana
+bustard
+red-backed sandpiper, dunlin, Erolia alpina
+redshank, Tringa totanus
+oystercatcher, oyster catcher
+pelican
+albatross, mollymawk
+sea lion

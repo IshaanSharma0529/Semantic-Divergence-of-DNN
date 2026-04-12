@@ -1,0 +1,402 @@
+{
+  "n01440764": {
+    "index": 0,
+    "human_name": "tench, Tinca tinca"
+  },
+  "n01443537": {
+    "index": 1,
+    "human_name": "goldfish, Carassius auratus"
+  },
+  "n01484850": {
+    "index": 2,
+    "human_name": "great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias"
+  },
+  "n01491361": {
+    "index": 3,
+    "human_name": "tiger shark, Galeocerdo cuvieri"
+  },
+  "n01494475": {
+    "index": 4,
+    "human_name": "hammerhead, hammerhead shark"
+  },
+  "n01496331": {
+    "index": 5,
+    "human_name": "electric ray, crampfish, numbfish, torpedo"
+  },
+  "n01498041": {
+    "index": 6,
+    "human_name": "stingray"
+  },
+  "n01514668": {
+    "index": 7,
+    "human_name": "cock"
+  },
+  "n01514859": {
+    "index": 8,
+    "human_name": "hen"
+  },
+  "n01531178": {
+    "index": 9,
+    "human_name": "goldfinch, Carduelis carduelis"
+  },
+  "n01537544": {
+    "index": 10,
+    "human_name": "indigo bunting, indigo finch, indigo bird, Passerina cyanea"
+  },
+  "n01560419": {
+    "index": 11,
+    "human_name": "bulbul"
+  },
+  "n01582220": {
+    "index": 12,
+    "human_name": "magpie"
+  },
+  "n01592084": {
+    "index": 13,
+    "human_name": "chickadee"
+  },
+  "n01601694": {
+    "index": 14,
+    "human_name": "water ouzel, dipper"
+  },
+  "n01608432": {
+    "index": 15,
+    "human_name": "kite"
+  },
+  "n01614925": {
+    "index": 16,
+    "human_name": "bald eagle, American eagle, Haliaeetus leucocephalus"
+  },
+  "n01622779": {
+    "index": 17,
+    "human_name": "great grey owl, great gray owl, Strix nebulosa"
+  },
+  "n01630670": {
+    "index": 18,
+    "human_name": "common newt, Triturus vulgaris"
+  },
+  "n01632458": {
+    "index": 19,
+    "human_name": "spotted salamander, Ambystoma maculatum"
+  },
+  "n01632777": {
+    "index": 20,
+    "human_name": "axolotl, mud puppy, Ambystoma mexicanum"
+  },
+  "n01644900": {
+    "index": 21,
+    "human_name": "tailed frog, bell toad, ribbed toad, tailed toad, Ascaphus trui"
+  },
+  "n01664065": {
+    "index": 22,
+    "human_name": "loggerhead, loggerhead turtle, Caretta caretta"
+  },
+  "n01665541": {
+    "index": 23,
+    "human_name": "leatherback turtle, leatherback, leathery turtle, Dermochelys coriacea"
+  },
+  "n01667114": {
+    "index": 24,
+    "human_name": "mud turtle"
+  },
+  "n01667778": {
+    "index": 25,
+    "human_name": "terrapin"
+  },
+  "n01675722": {
+    "index": 26,
+    "human_name": "banded gecko"
+  },
+  "n01677366": {
+    "index": 27,
+    "human_name": "common iguana, iguana, Iguana iguana"
+  },
+  "n01685808": {
+    "index": 28,
+    "human_name": "whiptail, whiptail lizard"
+  },
+  "n01687978": {
+    "index": 29,
+    "human_name": "agama"
+  },
+  "n01693334": {
+    "index": 30,
+    "human_name": "green lizard, Lacerta viridis"
+  },
+  "n01695060": {
+    "index": 31,
+    "human_name": "Komodo dragon, Komodo lizard, dragon lizard, giant lizard, Varanus komodoensis"
+  },
+  "n01698640": {
+    "index": 32,
+    "human_name": "American alligator, Alligator mississipiensis"
+  },
+  "n01728572": {
+    "index": 33,
+    "human_name": "thunder snake, worm snake, Carphophis amoenus"
+  },
+  "n01729322": {
+    "index": 34,
+    "human_name": "hognose snake, puff adder, sand viper"
+  },
+  "n01729977": {
+    "index": 35,
+    "human_name": "green snake, grass snake"
+  },
+  "n01734418": {
+    "index": 36,
+    "human_name": "king snake, kingsnake"
+  },
+  "n01735189": {
+    "index": 37,
+    "human_name": "garter snake, grass snake"
+  },
+  "n01739381": {
+    "index": 38,
+    "human_name": "vine snake"
+  },
+  "n01740131": {
+    "index": 39,
+    "human_name": "night snake, Hypsiglena torquata"
+  },
+  "n01742172": {
+    "index": 40,
+    "human_name": "boa constrictor, Constrictor constrictor"
+  },
+  "n01749939": {
+    "index": 41,
+    "human_name": "green mamba"
+  },
+  "n01751748": {
+    "index": 42,
+    "human_name": "sea snake"
+  },
+  "n01753488": {
+    "index": 43,
+    "human_name": "horned viper, cerastes, sand viper, horned asp, Cerastes cornutus"
+  },
+  "n01755581": {
+    "index": 44,
+    "human_name": "diamondback, diamondback rattlesnake, Crotalus adamanteus"
+  },
+  "n01756291": {
+    "index": 45,
+    "human_name": "sidewinder, horned rattlesnake, Crotalus cerastes"
+  },
+  "n01770081": {
+    "index": 46,
+    "human_name": "harvestman, daddy longlegs, Phalangium opilio"
+  },
+  "n01770393": {
+    "index": 47,
+    "human_name": "scorpion"
+  },
+  "n01773157": {
+    "index": 48,
+    "human_name": "black and gold garden spider, Argiope aurantia"
+  },
+  "n01773549": {
+    "index": 49,
+    "human_name": "barn spider, Araneus cavaticus"
+  },
+  "n01773797": {
+    "index": 50,
+    "human_name": "garden spider, Aranea diademata"
+  },
+  "n01774384": {
+    "index": 51,
+    "human_name": "black widow, Latrodectus mactans"
+  },
+  "n01774750": {
+    "index": 52,
+    "human_name": "tarantula"
+  },
+  "n01775062": {
+    "index": 53,
+    "human_name": "wolf spider, hunting spider"
+  },
+  "n01776313": {
+    "index": 54,
+    "human_name": "tick"
+  },
+  "n01795545": {
+    "index": 55,
+    "human_name": "black grouse"
+  },
+  "n01796340": {
+    "index": 56,
+    "human_name": "ptarmigan"
+  },
+  "n01798484": {
+    "index": 57,
+    "human_name": "prairie chicken, prairie grouse, prairie fowl"
+  },
+  "n01806143": {
+    "index": 58,
+    "human_name": "peacock"
+  },
+  "n01818515": {
+    "index": 59,
+    "human_name": "macaw"
+  },
+  "n01819313": {
+    "index": 60,
+    "human_name": "sulphur-crested cockatoo, Kakatoe galerita, Cacatua galerita"
+  },
+  "n01820546": {
+    "index": 61,
+    "human_name": "lorikeet"
+  },
+  "n01824575": {
+    "index": 62,
+    "human_name": "coucal"
+  },
+  "n01828970": {
+    "index": 63,
+    "human_name": "bee eater"
+  },
+  "n01829413": {
+    "index": 64,
+    "human_name": "hornbill"
+  },
+  "n01833805": {
+    "index": 65,
+    "human_name": "hummingbird"
+  },
+  "n01843383": {
+    "index": 66,
+    "human_name": "toucan"
+  },
+  "n01847000": {
+    "index": 67,
+    "human_name": "drake"
+  },
+  "n01855672": {
+    "index": 68,
+    "human_name": "goose"
+  },
+  "n01860187": {
+    "index": 69,
+    "human_name": "black swan, Cygnus atratus"
+  },
+  "n01877812": {
+    "index": 70,
+    "human_name": "wallaby, brush kangaroo"
+  },
+  "n01883070": {
+    "index": 71,
+    "human_name": "wombat"
+  },
+  "n01910747": {
+    "index": 72,
+    "human_name": "jellyfish"
+  },
+  "n01914609": {
+    "index": 73,
+    "human_name": "sea anemone, anemone"
+  },
+  "n01924916": {
+    "index": 74,
+    "human_name": "flatworm, platyhelminth"
+  },
+  "n01930112": {
+    "index": 75,
+    "human_name": "nematode, nematode worm, roundworm"
+  },
+  "n01943899": {
+    "index": 76,
+    "human_name": "conch"
+  },
+  "n01944390": {
+    "index": 77,
+    "human_name": "snail"
+  },
+  "n01950731": {
+    "index": 78,
+    "human_name": "sea slug, nudibranch"
+  },
+  "n01955084": {
+    "index": 79,
+    "human_name": "chiton, coat-of-mail shell, sea cradle, polyplacophore"
+  },
+  "n01968897": {
+    "index": 80,
+    "human_name": "chambered nautilus, pearly nautilus, nautilus"
+  },
+  "n01978287": {
+    "index": 81,
+    "human_name": "Dungeness crab, Cancer magister"
+  },
+  "n01978455": {
+    "index": 82,
+    "human_name": "rock crab, Cancer irroratus"
+  },
+  "n01984695": {
+    "index": 83,
+    "human_name": "spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish"
+  },
+  "n01985128": {
+    "index": 84,
+    "human_name": "crayfish, crawfish, crawdad, crawdaddy"
+  },
+  "n01986214": {
+    "index": 85,
+    "human_name": "hermit crab"
+  },
+  "n02002556": {
+    "index": 86,
+    "human_name": "white stork, Ciconia ciconia"
+  },
+  "n02006656": {
+    "index": 87,
+    "human_name": "spoonbill"
+  },
+  "n02007558": {
+    "index": 88,
+    "human_name": "flamingo"
+  },
+  "n02011460": {
+    "index": 89,
+    "human_name": "bittern"
+  },
+  "n02012849": {
+    "index": 90,
+    "human_name": "crane"
+  },
+  "n02013706": {
+    "index": 91,
+    "human_name": "limpkin, Aramus pictus"
+  },
+  "n02018207": {
+    "index": 92,
+    "human_name": "American coot, marsh hen, mud hen, water hen, Fulica americana"
+  },
+  "n02018795": {
+    "index": 93,
+    "human_name": "bustard"
+  },
+  "n02027492": {
+    "index": 94,
+    "human_name": "red-backed sandpiper, dunlin, Erolia alpina"
+  },
+  "n02028035": {
+    "index": 95,
+    "human_name": "redshank, Tringa totanus"
+  },
+  "n02037110": {
+    "index": 96,
+    "human_name": "oystercatcher, oyster catcher"
+  },
+  "n02051845": {
+    "index": 97,
+    "human_name": "pelican"
+  },
+  "n02058221": {
+    "index": 98,
+    "human_name": "albatross, mollymawk"
+  },
+  "n02077923": {
+    "index": 99,
+    "human_name": "sea lion"
+  }
+}
